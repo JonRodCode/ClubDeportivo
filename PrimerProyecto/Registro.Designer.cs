@@ -1,0 +1,295 @@
+﻿namespace PrimerProyecto
+{
+    partial class frmRegistro
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            lblNombre = new Label();
+            lblApellido = new Label();
+            lblTipo = new Label();
+            lblDocumento = new Label();
+            txtNombre = new TextBox();
+            txtApellido = new TextBox();
+            txtDocumento = new TextBox();
+            cboTipo = new ComboBox();
+            btnLimpiar = new Button();
+            btnIngresar = new Button();
+            dtgvPrincipal = new DataGridView();
+            lblMail = new Label();
+            txtMail = new TextBox();
+            lblCelular = new Label();
+            txtCelular = new TextBox();
+            chkRegistrar = new CheckBox();
+            lblRegistrar = new Label();
+            lblApto = new Label();
+            chkApto = new CheckBox();
+            ((System.ComponentModel.ISupportInitialize)dtgvPrincipal).BeginInit();
+            SuspendLayout();
+            // 
+            // lblNombre
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new Point(84, 40);
+            lblNombre.Margin = new Padding(2, 0, 2, 0);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(64, 20);
+            lblNombre.TabIndex = 0;
+            lblNombre.Text = "Nombre";
+            // 
+            // lblApellido
+            // 
+            lblApellido.AutoSize = true;
+            lblApellido.Location = new Point(84, 78);
+            lblApellido.Margin = new Padding(2, 0, 2, 0);
+            lblApellido.Name = "lblApellido";
+            lblApellido.Size = new Size(66, 20);
+            lblApellido.TabIndex = 1;
+            lblApellido.Text = "Apellido";
+            // 
+            // lblTipo
+            // 
+            lblTipo.AutoSize = true;
+            lblTipo.Location = new Point(84, 182);
+            lblTipo.Margin = new Padding(2, 0, 2, 0);
+            lblTipo.Name = "lblTipo";
+            lblTipo.Size = new Size(39, 20);
+            lblTipo.TabIndex = 2;
+            lblTipo.Text = "Tipo";
+            // 
+            // lblDocumento
+            // 
+            lblDocumento.AutoSize = true;
+            lblDocumento.Location = new Point(242, 182);
+            lblDocumento.Margin = new Padding(2, 0, 2, 0);
+            lblDocumento.Name = "lblDocumento";
+            lblDocumento.Size = new Size(87, 20);
+            lblDocumento.TabIndex = 3;
+            lblDocumento.Text = "Documento";
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(162, 40);
+            txtNombre.Margin = new Padding(2);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(290, 27);
+            txtNombre.TabIndex = 0;
+            // 
+            // txtApellido
+            // 
+            txtApellido.Location = new Point(163, 75);
+            txtApellido.Margin = new Padding(2);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(290, 27);
+            txtApellido.TabIndex = 1;
+            // 
+            // txtDocumento
+            // 
+            txtDocumento.Location = new Point(331, 177);
+            txtDocumento.Margin = new Padding(2);
+            txtDocumento.Name = "txtDocumento";
+            txtDocumento.Size = new Size(121, 27);
+            txtDocumento.TabIndex = 5;
+            // 
+            // cboTipo
+            // 
+            cboTipo.FormattingEnabled = true;
+            cboTipo.Items.AddRange(new object[] { "DNI", "Pasaporte", "Extranjero" });
+            cboTipo.Location = new Point(162, 177);
+            cboTipo.Margin = new Padding(2);
+            cboTipo.Name = "cboTipo";
+            cboTipo.Size = new Size(76, 28);
+            cboTipo.TabIndex = 4;
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Location = new Point(502, 53);
+            btnLimpiar.Margin = new Padding(2);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(90, 27);
+            btnLimpiar.TabIndex = 9;
+            btnLimpiar.Text = "LIMPIAR";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
+            // btnIngresar
+            // 
+            btnIngresar.Location = new Point(502, 105);
+            btnIngresar.Margin = new Padding(2);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(90, 27);
+            btnIngresar.TabIndex = 8;
+            btnIngresar.Text = "INGRESAR";
+            btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.Click += btnIngresar_Click;
+            // 
+            // dtgvPrincipal
+            // 
+            dtgvPrincipal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvPrincipal.Location = new Point(61, 288);
+            dtgvPrincipal.Margin = new Padding(2);
+            dtgvPrincipal.Name = "dtgvPrincipal";
+            dtgvPrincipal.RowHeadersWidth = 62;
+            dtgvPrincipal.RowTemplate.Height = 33;
+            dtgvPrincipal.Size = new Size(531, 180);
+            dtgvPrincipal.TabIndex = 10;
+            // 
+            // lblMail
+            // 
+            lblMail.AutoSize = true;
+            lblMail.Location = new Point(85, 115);
+            lblMail.Margin = new Padding(2, 0, 2, 0);
+            lblMail.Name = "lblMail";
+            lblMail.Size = new Size(38, 20);
+            lblMail.TabIndex = 11;
+            lblMail.Text = "Mail";
+            // 
+            // txtMail
+            // 
+            txtMail.Location = new Point(163, 108);
+            txtMail.Margin = new Padding(2);
+            txtMail.Name = "txtMail";
+            txtMail.Size = new Size(290, 27);
+            txtMail.TabIndex = 2;
+            // 
+            // lblCelular
+            // 
+            lblCelular.AutoSize = true;
+            lblCelular.Location = new Point(83, 145);
+            lblCelular.Margin = new Padding(2, 0, 2, 0);
+            lblCelular.Name = "lblCelular";
+            lblCelular.Size = new Size(55, 20);
+            lblCelular.TabIndex = 13;
+            lblCelular.Text = "Celular";
+            // 
+            // txtCelular
+            // 
+            txtCelular.Location = new Point(163, 142);
+            txtCelular.Margin = new Padding(2);
+            txtCelular.Name = "txtCelular";
+            txtCelular.Size = new Size(290, 27);
+            txtCelular.TabIndex = 3;
+            // 
+            // chkRegistrar
+            // 
+            chkRegistrar.AutoSize = true;
+            chkRegistrar.Location = new Point(434, 227);
+            chkRegistrar.Name = "chkRegistrar";
+            chkRegistrar.Size = new Size(18, 17);
+            chkRegistrar.TabIndex = 7;
+            chkRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // lblRegistrar
+            // 
+            lblRegistrar.AutoSize = true;
+            lblRegistrar.Location = new Point(254, 224);
+            lblRegistrar.Margin = new Padding(2, 0, 2, 0);
+            lblRegistrar.Name = "lblRegistrar";
+            lblRegistrar.Size = new Size(165, 20);
+            lblRegistrar.TabIndex = 15;
+            lblRegistrar.Text = "¿Registrar como Socio?";
+            // 
+            // lblApto
+            // 
+            lblApto.AutoSize = true;
+            lblApto.Location = new Point(85, 224);
+            lblApto.Margin = new Padding(2, 0, 2, 0);
+            lblApto.Name = "lblApto";
+            lblApto.Size = new Size(83, 20);
+            lblApto.TabIndex = 17;
+            lblApto.Text = "Apto Fisico";
+            // 
+            // chkApto
+            // 
+            chkApto.AutoSize = true;
+            chkApto.Location = new Point(184, 227);
+            chkApto.Name = "chkApto";
+            chkApto.Size = new Size(18, 17);
+            chkApto.TabIndex = 6;
+            chkApto.UseVisualStyleBackColor = true;
+            // 
+            // frmRegistro
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
+            ClientSize = new Size(640, 496);
+            Controls.Add(chkApto);
+            Controls.Add(lblApto);
+            Controls.Add(chkRegistrar);
+            Controls.Add(lblRegistrar);
+            Controls.Add(txtCelular);
+            Controls.Add(lblCelular);
+            Controls.Add(txtMail);
+            Controls.Add(lblMail);
+            Controls.Add(dtgvPrincipal);
+            Controls.Add(btnIngresar);
+            Controls.Add(btnLimpiar);
+            Controls.Add(cboTipo);
+            Controls.Add(txtDocumento);
+            Controls.Add(txtApellido);
+            Controls.Add(txtNombre);
+            Controls.Add(lblDocumento);
+            Controls.Add(lblTipo);
+            Controls.Add(lblApellido);
+            Controls.Add(lblNombre);
+            Margin = new Padding(2);
+            Name = "frmRegistro";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "REGISTRO";
+            Load += frmRegistro_Load;
+            ((System.ComponentModel.ISupportInitialize)dtgvPrincipal).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Label lblNombre;
+        private Label lblApellido;
+        private Label lblTipo;
+        private Label lblDocumento;
+        private TextBox txtNombre;
+        private TextBox txtApellido;
+        private TextBox txtDocumento;
+        private ComboBox cboTipo;
+        private Button btnLimpiar;
+        private Button btnIngresar;
+        private DataGridView dtgvPrincipal;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Apellido;
+        private DataGridViewTextBoxColumn Tipo;
+        private DataGridViewTextBoxColumn Documento;
+        private Label lblMail;
+        private TextBox txtMail;
+        private Label lblCelular;
+        private TextBox txtCelular;
+        private CheckBox chkRegistrar;
+        private Label lblRegistrar;
+        private Label lblApto;
+        private CheckBox chkApto;
+    }
+}
