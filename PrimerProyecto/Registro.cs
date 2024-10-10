@@ -1,5 +1,6 @@
 using System.Configuration;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace PrimerProyecto
 {
@@ -28,9 +29,14 @@ namespace PrimerProyecto
         {
 
             DataTable tabla = new DataTable();
+            Regex regex = new Regex("^[0-9]*$");
 
             if (txtNombre.Text == "" || txtApellido.Text == "" || cboTipo.SelectedItem == null || txtDocumento.Text == "" || txtMail.Text == "" || txtCelular.Text == "")
                 MessageBox.Show("Debe completar todos los campos!");
+
+            else if (!(regex.IsMatch(txtDocumento.Text) && regex.IsMatch(txtCelular.Text)))
+                MessageBox.Show("Los campos Documento y Celular solo deben llevar números");
+
             else
             {
                 string? respuesta;
@@ -66,7 +72,7 @@ namespace PrimerProyecto
                         MessageBoxIcon.Question);
                     }
                 }
-
+                btnLimpiar_Click(sender, e);
                 frmRegistro_Load(sender, e);
             }
         }
