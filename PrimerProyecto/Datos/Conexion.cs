@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.VisualBasic.Logging;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PrimerProyecto.Datos
 {
+    // usuario: Mari2023 y contra:123456
     public class Conexion
     {
         // declaramos las variables
@@ -20,9 +22,9 @@ namespace PrimerProyecto.Datos
         {
             this.baseDatos = "clubdeportivo";
             this.servidor = "localhost";
-            this.puerto = "3306";
+            this.puerto = "3308";
             this.usuario = "root";
-            this.clave = "1234";
+            this.clave = "Ninguna";
         }
         // proceso de interacción
         public MySqlConnection CrearConcexion()
