@@ -47,6 +47,7 @@
             lblRegistrar = new Label();
             lblApto = new Label();
             chkApto = new CheckBox();
+            lblListaClientes = new Label();
             ((System.ComponentModel.ISupportInitialize)dtgvPrincipal).BeginInit();
             SuspendLayout();
             // 
@@ -116,6 +117,7 @@
             // 
             // cboTipo
             // 
+            cboTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cboTipo.FormattingEnabled = true;
             cboTipo.Items.AddRange(new object[] { "DNI", "Pasaporte", "Extranjero" });
             cboTipo.Location = new Point(162, 177);
@@ -160,7 +162,7 @@
             // lblMail
             // 
             lblMail.AutoSize = true;
-            lblMail.Location = new Point(85, 115);
+            lblMail.Location = new Point(83, 115);
             lblMail.Margin = new Padding(2, 0, 2, 0);
             lblMail.Name = "lblMail";
             lblMail.Size = new Size(38, 20);
@@ -231,12 +233,22 @@
             chkApto.TabIndex = 6;
             chkApto.UseVisualStyleBackColor = true;
             // 
+            // lblListaClientes
+            // 
+            lblListaClientes.AutoSize = true;
+            lblListaClientes.Location = new Point(61, 266);
+            lblListaClientes.Name = "lblListaClientes";
+            lblListaClientes.Size = new Size(114, 20);
+            lblListaClientes.TabIndex = 18;
+            lblListaClientes.Text = "Lista de clientes";
+            // 
             // frmRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(640, 496);
+            Controls.Add(lblListaClientes);
             Controls.Add(chkApto);
             Controls.Add(lblApto);
             Controls.Add(chkRegistrar);
@@ -291,5 +303,6 @@
         private Label lblRegistrar;
         private Label lblApto;
         private CheckBox chkApto;
+        private Label lblListaClientes;
     }
 }
