@@ -22,9 +22,9 @@ namespace PrimerProyecto.Datos
         {
             this.baseDatos = "clubdeportivo";
             this.servidor = "localhost";
-            this.puerto = "3308";
+            this.puerto = "3306";
             this.usuario = "root";
-            this.clave = "Ninguna";
+            this.clave = "1234";
         }
         // proceso de interacción
         public MySqlConnection CrearConcexion()
