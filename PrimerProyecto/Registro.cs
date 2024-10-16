@@ -42,14 +42,14 @@ namespace PrimerProyecto
                 string? respuesta;
 
                 Entidades.E_Postulante postulante = new Entidades.E_Postulante();
-                postulante.nombre = txtNombre.Text;
-                postulante.apellido = txtApellido.Text;
-                postulante.tipo = cboTipo.SelectedItem.ToString();
-                postulante.documento = int.Parse(txtDocumento.Text);
-                postulante.mail = txtMail.Text;
-                postulante.celular = int.Parse(txtCelular.Text);
-                postulante.aptoFisico = chkApto.Checked;
-                postulante.esSocio = chkRegistrar.Checked;
+                postulante.Nombre = txtNombre.Text;
+                postulante.Apellido = txtApellido.Text;
+                postulante.Tipo = cboTipo.SelectedItem.ToString();
+                postulante.Documento = int.Parse(txtDocumento.Text);
+                postulante.Mail = txtMail.Text;
+                postulante.Celular = int.Parse(txtCelular.Text);
+                postulante.AptoFisico = chkApto.Checked;
+                postulante.EsSocio = chkRegistrar.Checked;
 
                 Datos.Postulante postulantes = new Datos.Postulante();
 

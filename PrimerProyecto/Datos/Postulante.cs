@@ -23,14 +23,14 @@ namespace PrimerProyecto.Datos
                 MySqlCommand comando = new MySqlCommand("NuevoCliente", sqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                comando.Parameters.Add("Nom", MySqlDbType.VarChar).Value = postulante.nombre;
-                comando.Parameters.Add("Ape", MySqlDbType.VarChar).Value = postulante.apellido;
-                comando.Parameters.Add("Tip", MySqlDbType.VarChar).Value = postulante.tipo;
-                comando.Parameters.Add("Doc", MySqlDbType.Int32).Value = postulante.documento;
-                comando.Parameters.Add("Mail", MySqlDbType.VarChar).Value = postulante.mail;
-                comando.Parameters.Add("Celular", MySqlDbType.Int32).Value = postulante.celular;
-                comando.Parameters.Add("AptoFisico", MySqlDbType.Bit).Value = postulante.aptoFisico;
-                comando.Parameters.Add("EsSocio", MySqlDbType.Bit).Value = postulante.esSocio;
+                comando.Parameters.Add("Nom", MySqlDbType.VarChar).Value = postulante.Nombre;
+                comando.Parameters.Add("Ape", MySqlDbType.VarChar).Value = postulante.Apellido;
+                comando.Parameters.Add("Tip", MySqlDbType.VarChar).Value = postulante.Tipo;
+                comando.Parameters.Add("Doc", MySqlDbType.Int32).Value = postulante.Documento;
+                comando.Parameters.Add("Mail", MySqlDbType.VarChar).Value = postulante.Mail;
+                comando.Parameters.Add("Celular", MySqlDbType.Int32).Value = postulante.Celular;
+                comando.Parameters.Add("AptoFisico", MySqlDbType.Bit).Value = postulante.AptoFisico;
+                comando.Parameters.Add("EsSocio", MySqlDbType.Bit).Value = postulante.EsSocio;
 
                 MySqlParameter ParCodigo = new MySqlParameter();
                 ParCodigo.ParameterName = "rta";

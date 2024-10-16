@@ -6,27 +6,19 @@ using System.Threading.Tasks;
 
 namespace PrimerProyecto.Entidades
 {
-    internal class E_Postulante
+    public class E_Postulante
     {
-        public string nombre;
-        public string apellido;
-        public string tipo;
-        public int documento;
-        public string mail;
-        public int celular;
-        public bool aptoFisico;
-        public bool esSocio;
         public E_Postulante() { }
         public E_Postulante(string nombre, string apellido, string tipo, int documento, string mail, int celular, bool aptoFisico, bool esSocio)
         {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.tipo = tipo;
-            this.documento = documento;
-            this.mail = mail;
-            this.celular = celular;
-            this.aptoFisico = aptoFisico;
-            this.esSocio = esSocio;
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+            this.Tipo = tipo;
+            this.Documento = documento;
+            this.Mail = mail;
+            this.Celular = celular;
+            this.AptoFisico = aptoFisico;
+            this.EsSocio = esSocio;
         }
 
 
@@ -34,10 +26,18 @@ namespace PrimerProyecto.Entidades
         public string Apellido { get; set; }
         public string Tipo { get; set; }
         public int Documento { get; set; }
+        public string Mail { get; set; }
+
+        public int Celular { get; set; }
+
+        public bool AptoFisico { get; set; }
+        public bool EsSocio { get; set; }
+
+
         public override string ToString()
         {
-            return ("Nombre: " + nombre + " Apellido: " + apellido +
-                "\nDocumento tipo: " + tipo + " Número: " + documento);
+            return ("Nombre: " + Nombre + " Apellido: " + Apellido +
+                "\nDocumento tipo: " + Tipo + " Número: " + Documento);
         }
     }
 }
