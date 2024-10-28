@@ -21,7 +21,7 @@ namespace PrimerProyecto
             txtCelular.Text = "";
             cboTipo.SelectedIndex = -1;
             chkApto.Checked = false;
-            chkRegistrar.Checked = false;
+            chkRegistrarSocio.Checked = false;
             txtNombre.Focus();
         }
 
@@ -37,31 +37,52 @@ namespace PrimerProyecto
             else if (!(regex.IsMatch(txtDocumento.Text) && regex.IsMatch(txtCelular.Text)))
                 MessageBox.Show("Los campos Documento y Celular solo deben llevar números");
 
+            else if (!chkApto.Checked)
+                MessageBox.Show("Por favor, ingrese el Apto Físico.");
+
             else
             {
                 string? respuesta;
+                bool esnumero;
+                Datos.SociosNoSocios socioNoSocio = new Datos.SociosNoSocios();
 
-                Entidades.E_Postulante postulante = new Entidades.E_Postulante();
-                postulante.Nombre = txtNombre.Text;
-                postulante.Apellido = txtApellido.Text;
-                postulante.Tipo = cboTipo.SelectedItem.ToString();
-                postulante.Documento = int.Parse(txtDocumento.Text);
-                postulante.Mail = txtMail.Text;
-                postulante.Celular = int.Parse(txtCelular.Text);
-                postulante.AptoFisico = chkApto.Checked;
-                postulante.EsSocio = chkRegistrar.Checked;
+                bool esSocio = chkRegistrarSocio.Checked;
 
-                Datos.Postulante postulantes = new Datos.Postulante();
+                if (esSocio)
+                {
+                    Entidades.E_Socio socio = new Entidades.E_Socio();
+                    socio.Nombre = txtNombre.Text;
+                    socio.Apellido = txtApellido.Text;
+                    socio.Tipo = cboTipo.SelectedItem.ToString();
+                    socio.Documento = int.Parse(txtDocumento.Text);
+                    socio.Mail = txtMail.Text;
+                    socio.Celular = int.Parse(txtCelular.Text);
+                    socio.AptoFisico = chkApto.Checked;
 
-                respuesta = postulantes.RegistrarNuevoCliente(postulante);
+                    respuesta = socioNoSocio.RegistrarSocioONoSocio(socio, esSocio);
+                }
 
-                bool esnumero = int.TryParse(respuesta, out int codigo);
+                else
+                {
+                    Entidades.E_NoSocio noSocio = new Entidades.E_NoSocio();
+                    noSocio.Nombre = txtNombre.Text;
+                    noSocio.Apellido = txtApellido.Text;
+                    noSocio.Tipo = cboTipo.SelectedItem.ToString();
+                    noSocio.Documento = int.Parse(txtDocumento.Text);
+                    noSocio.Mail = txtMail.Text;
+                    noSocio.Celular = int.Parse(txtCelular.Text);
+                    noSocio.AptoFisico = chkApto.Checked;
+
+                    respuesta = socioNoSocio.RegistrarSocioONoSocio(noSocio, esSocio);
+                }
+
+                esnumero = int.TryParse(respuesta, out int codigo);
 
                 if (esnumero)
                 {
                     if (codigo == 1)
                     {
-                        MessageBox.Show("POSTULANTE YA EXISTE", "AVISO DEL SISTEMA",
+                        MessageBox.Show("CLIENTE YA EXISTE", "AVISO DEL SISTEMA",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                     }
@@ -79,9 +100,14 @@ namespace PrimerProyecto
 
         private void frmRegistro_Load(object sender, EventArgs e)
         {
-            Datos.Postulante postulante = new Datos.Postulante();
+            Datos.SociosNoSocios postulante = new Datos.SociosNoSocios();
 
             dtgvPrincipal.DataSource = postulante.verClientes();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

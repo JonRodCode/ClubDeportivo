@@ -7,13 +7,13 @@ DELIMITER //
 
 CREATE PROCEDURE VerClientes()
 begin
-	select * from cliente;
+	select * from clientes;
 end//
 
 CREATE PROCEDURE IngresoLogin (IN Usu VARCHAR(20), IN Pass VARCHAR(15))   begin
   
   select NomRol
-	from usuario u inner join roles r on u.RolUsu = r.RolUsu
+	from usuarios u inner join roles r on u.RolUsu = r.RolUsu
 		where NombreUsu = Usu and PassUsu = Pass
 			and Activo = 1; 
 end//
@@ -25,7 +25,7 @@ begin
      declare filas int default 0;
 	 declare existe int default 0;
     
-     set filas = (select count(*) from cliente);
+     set filas = (select count(*) from clientes);
      if filas = 0 then
 		set filas = 452; /* consideramos a este numero como el primer numero de postulante */
      else
@@ -33,17 +33,19 @@ begin
 		buscamos el ultimo numero de postulante almacenado para sumarle una unidad y
 		considerarla como PRIMARY KEY de la tabla
    ___________________________________________________________________________ */
-		set filas = (select max(NCliente) + 1 from cliente);
+		set filas = (select max(NCliente) + 1 from clientes);
 		/* ---------------------------------------------------------
 			para saber si ya esta almacenado el postulante
 		------------------------------------------------------- */	
-		set existe = (select count(*) from cliente where TdocC = Tip and DocC = Doc);
+		set existe = (select count(*) from clientes where TdocC = Tip and DocC = Doc);
      end if;
 	 
 	  if existe = 0 then	 
-		 insert into cliente values(filas,Nom,Ape,Tip,Doc,Mail,Celular,AptoFisico); 
+		 insert into clientes values(filas,Nom,Ape,Tip,Doc,Mail,Celular,AptoFisico); 
          if EsSocio = true then
-            insert into socio(NCliente) values(filas);
+            insert into socios(NCliente) values(filas);
+		 else
+			insert into nosocios(NCliente) values(filas);
          end if;
 		 set rta  = filas;
 	  else
@@ -53,7 +55,7 @@ begin
 
 DELIMITER ;
 
-CREATE TABLE cliente (
+CREATE TABLE clientes (
   NCliente int(11) NOT NULL,
   NombreC varchar(30),
   ApellidoC varchar(40),
@@ -65,18 +67,25 @@ CREATE TABLE cliente (
   constraint pk_cliente primary key (NCliente)
 );
 
-INSERT INTO cliente VALUES
+INSERT INTO clientes VALUES
 (452, 'Lucre', 'Lucre', 'DNI', 11222333, 'lucre@lucre.com', 112233, true);
 
-CREATE TABLE socio (
+CREATE TABLE socios (
   IdSocio int(11) AUTO_INCREMENT,
   NCliente int(11) DEFAULT NULL,
   constraint pk_socio primary key (IdSocio),
-  constraint fk_cliente foreign key(NCliente) references cliente(NCliente)
+  constraint fk_clienteSocio foreign key(NCliente) references cliente(NCliente)
 ) ;
 
-INSERT INTO socio(NCliente) VALUES
+INSERT INTO socios(NCliente) VALUES
 (452);
+
+CREATE TABLE nosocios (
+  Idnosocio int(11) AUTO_INCREMENT,
+  NCliente int(11) DEFAULT NULL,
+  constraint pk_nosocio primary key (Idnosocio),
+  constraint fk_clienteNoSocio foreign key(NCliente) references cliente(NCliente)
+) ;
 
 create table roles(
 RolUsu int,
@@ -88,7 +97,7 @@ insert into roles values
 (120,'Administrador'),
 (121,'Empleado');
 
-create table usuario(
+create table usuarios(
 CodUsu int auto_increment,
 NombreUsu varchar (20),
 PassUsu varchar (15),

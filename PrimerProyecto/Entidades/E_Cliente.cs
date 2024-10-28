@@ -6,22 +6,8 @@ using System.Threading.Tasks;
 
 namespace PrimerProyecto.Entidades
 {
-    public class E_Postulante
+    public abstract class E_Cliente
     {
-        public E_Postulante() { }
-        public E_Postulante(string nombre, string apellido, string tipo, int documento, string mail, int celular, bool aptoFisico, bool esSocio)
-        {
-            this.Nombre = nombre;
-            this.Apellido = apellido;
-            this.Tipo = tipo;
-            this.Documento = documento;
-            this.Mail = mail;
-            this.Celular = celular;
-            this.AptoFisico = aptoFisico;
-            this.EsSocio = esSocio;
-        }
-
-
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Tipo { get; set; }
@@ -31,8 +17,17 @@ namespace PrimerProyecto.Entidades
         public int Celular { get; set; }
 
         public bool AptoFisico { get; set; }
-        public bool EsSocio { get; set; }
-
+        protected E_Cliente(string nombre, string apellido, string tipo, int documento, string mail, int celular, bool aptoFisico)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            Tipo = tipo;
+            Documento = documento;
+            Mail = mail;
+            Celular = celular;
+            AptoFisico = aptoFisico;
+        }
+        public E_Cliente() { }
 
         public override string ToString()
         {
