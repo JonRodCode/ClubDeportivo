@@ -53,6 +53,7 @@
             btnCobrarCuota.Size = new Size(206, 80);
             btnCobrarCuota.TabIndex = 1;
             btnCobrarCuota.UseVisualStyleBackColor = true;
+            btnCobrarCuota.Click += btnCobrarCuota_Click;
             // 
             // btnInscribirAActividad
             // 

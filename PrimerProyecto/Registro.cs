@@ -1,3 +1,5 @@
+using Mysqlx.Session;
+using PrimerProyecto.Datos;
 using System.Configuration;
 using System.Data;
 using System.Text.RegularExpressions;
@@ -29,12 +31,11 @@ namespace PrimerProyecto
         {
 
             DataTable tabla = new DataTable();
-            Regex regex = new Regex("^[0-9]*$");
 
             if (txtNombre.Text == "" || txtApellido.Text == "" || cboTipo.SelectedItem == null || txtDocumento.Text == "" || txtMail.Text == "" || txtCelular.Text == "")
                 MessageBox.Show("Debe completar todos los campos!");
 
-            else if (!(regex.IsMatch(txtDocumento.Text) && regex.IsMatch(txtCelular.Text)))
+            else if (!(Validaciones.soloNumeros(txtDocumento.Text) && Validaciones.soloNumeros(txtCelular.Text)))
                 MessageBox.Show("Los campos Documento y Celular solo deben llevar números");
 
             else if (!chkApto.Checked)
@@ -88,7 +89,12 @@ namespace PrimerProyecto
                     }
                     else
                     {
-                        MessageBox.Show("se almaceno con exito con el codigo Nro " + respuesta, "AVISO DEL SISTEMA",
+                        if (esSocio)
+                        MessageBox.Show("Se almacenó con exito con el Nro de Socio: " + respuesta, "AVISO DEL SISTEMA",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Question);
+                        else
+                            MessageBox.Show("Se almacenó con exito.", "AVISO DEL SISTEMA",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Question);
                     }
@@ -109,5 +115,7 @@ namespace PrimerProyecto
         {
             this.Close();
         }
+
+        
     }
 }

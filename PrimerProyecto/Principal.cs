@@ -27,5 +27,11 @@ namespace PrimerProyecto
         {
             Application.Exit();
         }
+
+        private void btnCobrarCuota_Click(object sender, EventArgs e)
+        {
+            Form cobrar = new frmCobrarCuota();
+            cobrar.ShowDialog();
+        }
     }
 }

@@ -8,17 +8,18 @@ namespace PrimerProyecto.Entidades
 {
     public class E_Socio : E_Cliente
     {
-        public E_Socio(string nombre, 
+        public int Numero { get; set; }
+        public E_Socio(string nombre,
             string apellido,
-            string tipo, 
-            int documento, 
-            string mail, 
-            int celular, 
-            bool aptoFisico, 
+            string tipo,
+            int documento,
+            string mail,
+            int celular,
+            bool aptoFisico,
             bool esSocio) : base(nombre, apellido, tipo, documento, mail, celular, aptoFisico) { }
 
         public E_Socio() : base() { }
-        
+
     }
 
 }

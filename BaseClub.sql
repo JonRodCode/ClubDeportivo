@@ -20,12 +20,12 @@ end//
 
 CREATE PROCEDURE NuevoCliente (IN Nom VARCHAR(30), IN Ape VARCHAR(40), IN Tip VARCHAR(20), IN Doc INT,
 IN Mail varchar(80),IN Celular int(20), IN AptoFisico boolean, IN EsSocio boolean, OUT rta INT) 
-
 begin
      declare filas int default 0;
 	 declare existe int default 0;
+     declare IdNuevoCliente int default 0;
     
-     set filas = (select count(*) from clientes);
+     set filas = (select count(*) from socios);
      if filas = 0 then
 		set filas = 452; /* consideramos a este numero como el primer numero de postulante */
      else
@@ -33,7 +33,7 @@ begin
 		buscamos el ultimo numero de postulante almacenado para sumarle una unidad y
 		considerarla como PRIMARY KEY de la tabla
    ___________________________________________________________________________ */
-		set filas = (select max(NCliente) + 1 from clientes);
+		set filas = (select max(IdSocio) + 1 from socios);
 		/* ---------------------------------------------------------
 			para saber si ya esta almacenado el postulante
 		------------------------------------------------------- */	
@@ -41,24 +41,31 @@ begin
      end if;
 	 
 	  if existe = 0 then	 
-		 insert into clientes values(filas,Nom,Ape,Tip,Doc,Mail,Celular,AptoFisico); 
+		 insert into clientes values(null,Nom,Ape,Tip,Doc,Mail,Celular,AptoFisico); 
+		 set IdNuevoCliente = (select max(nCliente) from clientes);
          if EsSocio = true then
-            insert into socios(NCliente) values(filas);
+            insert into socios values(filas, IdNuevoCliente);
 		 else
-			insert into nosocios(NCliente) values(filas);
+			insert into nosocios(NCliente) values(IdNuevoCliente);
          end if;
 		 set rta  = filas;
 	  else
 		 set rta = existe;
       end if;		 
-     end //
+end //
 
+CREATE PROCEDURE NuevaCuota (IN Tipo VARCHAR(40), IN Fecha date, IN FechaVencimiento date,
+IN NCliente int,IN Precio decimal(20,2), OUT rta INT) 
+begin      
+		 insert into pagos values(null,Tipo,Fecha,FechaVencimiento,NCliente,Precio); 
+		 set rta  = (select max(CodPago) from pagos);	 
+end //
 DELIMITER ;
 
 CREATE TABLE clientes (
-  NCliente int(11) NOT NULL,
-  NombreC varchar(30),
-  ApellidoC varchar(40),
+  NCliente int(11) auto_increment,
+  Nombre varchar(30),
+  Apellido varchar(40),
   TDocC varchar(20),
   DocC int(11),
   Mail varchar(80),
@@ -68,23 +75,25 @@ CREATE TABLE clientes (
 );
 
 INSERT INTO clientes VALUES
-(452, 'Lucre', 'Lucre', 'DNI', 11222333, 'lucre@lucre.com', 112233, true);
+(null,'Lucre', 'Lucre', 'DNI', 11222333, 'lucre@lucre.com', 112233, true),
+(null,'Joni', 'Joni', 'DNI', 11222333, 'joni@joni.com', 112233, true);
 
 CREATE TABLE socios (
-  IdSocio int(11) AUTO_INCREMENT,
+  IdSocio int(11),
   NCliente int(11) DEFAULT NULL,
   constraint pk_socio primary key (IdSocio),
-  constraint fk_clienteSocio foreign key(NCliente) references cliente(NCliente)
+  constraint fk_clienteSocio foreign key(NCliente) references clientes(NCliente)
 ) ;
 
-INSERT INTO socios(NCliente) VALUES
-(452);
+INSERT INTO socios VALUES
+(452,1),
+(453, 2);
 
 CREATE TABLE nosocios (
   Idnosocio int(11) AUTO_INCREMENT,
   NCliente int(11) DEFAULT NULL,
   constraint pk_nosocio primary key (Idnosocio),
-  constraint fk_clienteNoSocio foreign key(NCliente) references cliente(NCliente)
+  constraint fk_clienteNoSocio foreign key(NCliente) references clientes(NCliente)
 ) ;
 
 create table roles(
@@ -107,8 +116,34 @@ constraint pk_usuario primary key (CodUsu),
 constraint fk_usuario foreign key(RolUsu) references roles(RolUsu)
 );
 
-insert into usuario(CodUsu,NombreUsu,PassUsu,RolUsu) values
+insert into usuarios(CodUsu,NombreUsu,PassUsu,RolUsu) values
 (26,'Mari2023','123456',120);
+
+create table pagos(
+CodPago int auto_increment,
+Tipo varchar(30),
+Fecha date,
+FechaVencimiento date,
+NCliente int,
+Precio decimal(20,2),
+constraint pk_pagos primary key (CodPago),
+constraint fk_pagos foreign key(NCliente) references Clientes(NCliente)
+);
+
+insert into pagos values
+(null, 'Cuota Mensual', '2024/07/07', '2024/08/07', 1, 55);
+
+create table cuotamensual(
+Id int auto_increment,
+Precio decimal(20,2),
+constraint pk_cuotamensual primary key (Id)
+);
+
+insert into cuotamensual values
+(null, 12541.99);
+
+
+
 
 
 
