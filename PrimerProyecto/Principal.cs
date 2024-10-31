@@ -33,5 +33,11 @@ namespace PrimerProyecto
             Form cobrar = new frmCobrarCuota();
             cobrar.ShowDialog();
         }
+
+        private void btnInscribirAActividad_Click(object sender, EventArgs e)
+        {
+            Form inscribir = new fmrInscribirEnActividad();
+            inscribir.ShowDialog();
+        }
     }
 }

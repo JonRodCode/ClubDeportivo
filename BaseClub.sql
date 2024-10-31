@@ -27,22 +27,25 @@ begin
     
      set filas = (select count(*) from socios);
      if filas = 0 then
-		set filas = 452; /* consideramos a este numero como el primer numero de postulante */
+		set filas = 452; /* consideramos a este numero como el primer numero de Socio */
      else
      /* -------------------------------------------------------------------------------
-		buscamos el ultimo numero de postulante almacenado para sumarle una unidad y
+		buscamos el ultimo numero de Socio almacenado para sumarle una unidad y
 		considerarla como PRIMARY KEY de la tabla
    ___________________________________________________________________________ */
 		set filas = (select max(IdSocio) + 1 from socios);
 		/* ---------------------------------------------------------
-			para saber si ya esta almacenado el postulante
+			para saber si ya esta almacenado el Cliente
 		------------------------------------------------------- */	
 		set existe = (select count(*) from clientes where TdocC = Tip and DocC = Doc);
      end if;
 	 
-	  if existe = 0 then	 
+	  if existe = 0 then	
+			/* Insertamos el nuevo cliente y luego capturamos su ID*/
 		 insert into clientes values(null,Nom,Ape,Tip,Doc,Mail,Celular,AptoFisico); 
 		 set IdNuevoCliente = (select max(nCliente) from clientes);
+         
+         /* Insertamos el nuevo cliente en la tabla correspondiente si quiere ser Socio o No Socio*/
          if EsSocio = true then
             insert into socios values(filas, IdNuevoCliente);
 		 else
@@ -75,8 +78,9 @@ CREATE TABLE clientes (
 );
 
 INSERT INTO clientes VALUES
-(null,'Lucre', 'Lucre', 'DNI', 11222333, 'lucre@lucre.com', 112233, true),
-(null,'Joni', 'Joni', 'DNI', 11222333, 'joni@joni.com', 112233, true);
+(null,'Lucre', 'Lucre', 'DNI', 111, 'lucre@lucre.com', 112233, true),
+(null,'Joni', 'Joni', 'DNI', 222, 'joni@joni.com', 112233, true),
+(null,'Sara', 'Sara', 'DNI', 333, 'sara@sara.com', 112233, false);
 
 CREATE TABLE socios (
   IdSocio int(11),
@@ -95,6 +99,8 @@ CREATE TABLE nosocios (
   constraint pk_nosocio primary key (Idnosocio),
   constraint fk_clienteNoSocio foreign key(NCliente) references clientes(NCliente)
 ) ;
+INSERT INTO nosocios(NCliente) VALUES
+(3);
 
 create table roles(
 RolUsu int,
@@ -142,7 +148,33 @@ constraint pk_cuotamensual primary key (Id)
 insert into cuotamensual values
 (null, 12541.99);
 
+create table profesores(
+NProfesor int auto_increment,
+Nombre varchar(30),
+Apellido varchar(40),
+constraint pk_profesores primary key (NProfesor)
+);
 
+insert into profesores values
+(null, 'Leo', 'Messi'),
+(null, 'Manu', 'Ginobili'),
+(null, 'Tiger', 'Woods'),
+(null, 'Serena', 'Williams');
+
+create table actividades(
+Id int auto_increment,
+Nombre varchar(50),
+Precio decimal(20,2),
+NProfesor int,
+constraint pk_actividad primary key (Id)
+);
+
+insert into actividades values
+(null, 'Tenis', 3934.1, 2),
+(null, 'Futbol', 5401.2, 3),
+(null, 'Basquet', 4608.3, 4),
+(null, 'MiniGolf', 9925.4, 1)
+;
 
 
 

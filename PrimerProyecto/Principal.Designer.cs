@@ -51,7 +51,7 @@
             btnCobrarCuota.Location = new Point(141, 457);
             btnCobrarCuota.Name = "btnCobrarCuota";
             btnCobrarCuota.Size = new Size(206, 80);
-            btnCobrarCuota.TabIndex = 1;
+            btnCobrarCuota.TabIndex = 2;
             btnCobrarCuota.UseVisualStyleBackColor = true;
             btnCobrarCuota.Click += btnCobrarCuota_Click;
             // 
@@ -61,8 +61,9 @@
             btnInscribirAActividad.Location = new Point(141, 336);
             btnInscribirAActividad.Name = "btnInscribirAActividad";
             btnInscribirAActividad.Size = new Size(206, 80);
-            btnInscribirAActividad.TabIndex = 2;
+            btnInscribirAActividad.TabIndex = 1;
             btnInscribirAActividad.UseVisualStyleBackColor = true;
+            btnInscribirAActividad.Click += btnInscribirAActividad_Click;
             // 
             // btnListar
             // 

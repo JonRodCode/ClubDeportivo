@@ -33,8 +33,6 @@ namespace PrimerProyecto
         }
         private void btnVerificar_Click(object sender, EventArgs e)
         {
-            doc = new frmComprobante();
-
             if (txtNumSocio.Text == "" || !(Validaciones.soloNumeros(txtNumSocio.Text)))
             {
                 MessageBox.Show("Ingrese un número de socio válido", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -43,7 +41,8 @@ namespace PrimerProyecto
             {
                 txtNumSocio.Enabled = true;
                 btnVerificar.Text = "Verificar";
-                btnComprobarPago.Enabled = false;
+                btnIrAPagar.Enabled = false;
+                pnFormaPago.Enabled = false;
             }
 
             else
@@ -73,12 +72,8 @@ namespace PrimerProyecto
 
                         txtNumSocio.Enabled = false;
                         btnVerificar.Text = "Cambiar";
-                        btnComprobarPago.Enabled = true;
-
-
-                        // Cargamos estos datos en el Comprobante
-                        doc.numeroSocio = idSocio;
-                        doc.nombreCliente = nombreApellido;
+                        btnIrAPagar.Enabled = true;
+                        pnFormaPago.Enabled = true;
 
                         MessageBox.Show("Socio verificado.", "AVISO DEL SISTEMA",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -102,9 +97,13 @@ namespace PrimerProyecto
         }
         private void btnPagar_Click(object sender, EventArgs e)
         {
-
+            doc = new frmComprobante();
             try
             {
+                // Cargamos estos datos en el Comprobante
+                doc.numeroSocio = idSocio;
+                doc.nombreCliente = nombreApellido;
+
                 string cuotaMensual = "Cuota mensual";
                 SociosNoSocios socio = new SociosNoSocios();
 
@@ -128,10 +127,9 @@ namespace PrimerProyecto
                         doc.formaDePago = "Efectivo";
                     else
                         doc.formaDePago = "Tarjeta";
-
-                    btnComprobarPago.Enabled = false;
+                                       
                     doc.cuota.Tipo = cuotaMensual;
-                    doc.cuota.NCliente = nCliente;
+                    doc.cuota.NCliente = nCliente;                    
 
                     doc.ShowDialog();
                     this.Close();

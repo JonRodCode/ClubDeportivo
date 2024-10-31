@@ -30,13 +30,14 @@
         {
             lblNumSocio = new Label();
             txtNumSocio = new TextBox();
-            gbFormaDePago = new GroupBox();
             rbTarjeta = new RadioButton();
             rbEfectivo = new RadioButton();
             btnVolver = new Button();
-            btnComprobarPago = new Button();
+            btnIrAPagar = new Button();
             btnVerificar = new Button();
-            gbFormaDePago.SuspendLayout();
+            pnFormaPago = new Panel();
+            lblFormaDePago = new Label();
+            pnFormaPago.SuspendLayout();
             SuspendLayout();
             // 
             // lblNumSocio
@@ -55,21 +56,10 @@
             txtNumSocio.Size = new Size(125, 27);
             txtNumSocio.TabIndex = 1;
             // 
-            // gbFormaDePago
-            // 
-            gbFormaDePago.Controls.Add(rbTarjeta);
-            gbFormaDePago.Controls.Add(rbEfectivo);
-            gbFormaDePago.Location = new Point(526, 41);
-            gbFormaDePago.Name = "gbFormaDePago";
-            gbFormaDePago.Size = new Size(250, 125);
-            gbFormaDePago.TabIndex = 2;
-            gbFormaDePago.TabStop = false;
-            gbFormaDePago.Text = "Forma de pago";
-            // 
             // rbTarjeta
             // 
             rbTarjeta.AutoSize = true;
-            rbTarjeta.Location = new Point(39, 76);
+            rbTarjeta.Location = new Point(49, 78);
             rbTarjeta.Name = "rbTarjeta";
             rbTarjeta.Size = new Size(74, 24);
             rbTarjeta.TabIndex = 1;
@@ -80,7 +70,7 @@
             // rbEfectivo
             // 
             rbEfectivo.AutoSize = true;
-            rbEfectivo.Location = new Point(39, 46);
+            rbEfectivo.Location = new Point(49, 48);
             rbEfectivo.Name = "rbEfectivo";
             rbEfectivo.Size = new Size(83, 24);
             rbEfectivo.TabIndex = 0;
@@ -90,7 +80,7 @@
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(550, 264);
+            btnVolver.Location = new Point(570, 266);
             btnVolver.Name = "btnVolver";
             btnVolver.Size = new Size(138, 29);
             btnVolver.TabIndex = 3;
@@ -98,20 +88,20 @@
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
-            // btnComprobarPago
+            // btnIrAPagar
             // 
-            btnComprobarPago.Enabled = false;
-            btnComprobarPago.Location = new Point(75, 167);
-            btnComprobarPago.Name = "btnComprobarPago";
-            btnComprobarPago.Size = new Size(134, 34);
-            btnComprobarPago.TabIndex = 4;
-            btnComprobarPago.Text = "Ir a Pagar";
-            btnComprobarPago.UseVisualStyleBackColor = true;
-            btnComprobarPago.Click += btnPagar_Click;
+            btnIrAPagar.Enabled = false;
+            btnIrAPagar.Location = new Point(75, 261);
+            btnIrAPagar.Name = "btnIrAPagar";
+            btnIrAPagar.Size = new Size(134, 34);
+            btnIrAPagar.TabIndex = 4;
+            btnIrAPagar.Text = "Ir a Pagar";
+            btnIrAPagar.UseVisualStyleBackColor = true;
+            btnIrAPagar.Click += btnPagar_Click;
             // 
             // btnVerificar
             // 
-            btnVerificar.Location = new Point(327, 49);
+            btnVerificar.Location = new Point(128, 98);
             btnVerificar.Name = "btnVerificar";
             btnVerificar.Size = new Size(94, 29);
             btnVerificar.TabIndex = 6;
@@ -119,23 +109,44 @@
             btnVerificar.UseVisualStyleBackColor = true;
             btnVerificar.Click += btnVerificar_Click;
             // 
+            // pnFP
+            // 
+            pnFormaPago.BorderStyle = BorderStyle.FixedSingle;
+            pnFormaPago.Controls.Add(rbTarjeta);
+            pnFormaPago.Controls.Add(lblFormaDePago);
+            pnFormaPago.Controls.Add(rbEfectivo);
+            pnFormaPago.Enabled = false;
+            pnFormaPago.Location = new Point(505, 49);
+            pnFormaPago.Name = "pnFP";
+            pnFormaPago.Size = new Size(250, 125);
+            pnFormaPago.TabIndex = 7;
+            // 
+            // lblFormaDePago
+            // 
+            lblFormaDePago.AutoSize = true;
+            lblFormaDePago.Location = new Point(15, 9);
+            lblFormaDePago.Name = "lblFormaDePago";
+            lblFormaDePago.Size = new Size(111, 20);
+            lblFormaDePago.TabIndex = 0;
+            lblFormaDePago.Text = "Forma de pago";
+            // 
             // frmCobrarCuota
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(779, 421);
+            Controls.Add(pnFormaPago);
             Controls.Add(btnVerificar);
-            Controls.Add(btnComprobarPago);
+            Controls.Add(btnIrAPagar);
             Controls.Add(btnVolver);
-            Controls.Add(gbFormaDePago);
             Controls.Add(txtNumSocio);
             Controls.Add(lblNumSocio);
             Name = "frmCobrarCuota";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CobrarCuota";
-            gbFormaDePago.ResumeLayout(false);
-            gbFormaDePago.PerformLayout();
+            pnFormaPago.ResumeLayout(false);
+            pnFormaPago.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,11 +155,12 @@
 
         private Label lblNumSocio;
         private TextBox txtNumSocio;
-        private GroupBox gbFormaDePago;
         private RadioButton rbTarjeta;
         private RadioButton rbEfectivo;
         private Button btnVolver;
-        private Button btnComprobarPago;
+        private Button btnIrAPagar;
         private Button btnVerificar;
+        private Panel pnFormaPago;
+        private Label lblFormaDePago;
     }
 }

@@ -58,15 +58,27 @@ namespace PrimerProyecto
 
         private void frmComprobante_Load(object sender, EventArgs e)
         {
-            DateTime hoy = DateTime.UtcNow;
-
-            lblFechaActual.Text = hoy.ToShortDateString();
+            lblFechaActual.Text = cuota.Fecha.ToShortDateString();
             lblCliente.Text = nombreCliente;
-            lblNumeroDeSocio.Text = numeroSocio.ToString();
-            lblVencimiento.Text = cuota.FechaVencimiento.ToShortDateString();
+
+            // Si es un Pago de Actividad cambiamos algunos labels
+            if (numeroSocio == 0)
+            {
+                lblSocioNumero.Visible = false;
+                lblNumeroDeSocio.Visible = false;
+                lblTemaAPagar.Text = "Actividad";
+                lblProximoVenc.Text = "Nombre de actividad:";
+                lblVencimiento.Text = nombreActividad;
+            }
+            //Si no dejamos por determinado el Pago de Cuota para el Socio
+            else
+            {
+                lblNumeroDeSocio.Text = numeroSocio.ToString();
+                lblVencimiento.Text = cuota.FechaVencimiento.ToShortDateString();
+                lblTemaAPagar.Text = cuota.Tipo;
+            }
             lblEfectivoOTarjeta.Text = formaDePago;
             lblPrecio.Text = cuota.Precio.ToString();
-            lblTemaAPagar.Text = cuota.Tipo;
         }
 
         private void btnPagar_Click(object sender, EventArgs e)
