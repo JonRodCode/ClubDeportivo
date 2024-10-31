@@ -153,6 +153,6 @@ namespace PrimerProyecto.Datos
             }
             return cuota;
         }
-
+                
     }
 }

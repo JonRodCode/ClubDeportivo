@@ -7,7 +7,10 @@ DELIMITER //
 
 CREATE PROCEDURE VerClientes()
 begin
-	select * from clientes;
+	select if(idSocio is not null, 'Socio', 'No Socio') as tipoCliente,
+	nombre, apellido, TDocC, DocC, Mail,Celular, AptoFisico
+	from clientes as c
+	left join socios as s on c.NCliente = s.NCliente;
 end//
 
 CREATE PROCEDURE IngresoLogin (IN Usu VARCHAR(20), IN Pass VARCHAR(15))   begin
@@ -63,6 +66,8 @@ begin
 		 insert into pagos values(null,Tipo,Fecha,FechaVencimiento,NCliente,Precio); 
 		 set rta  = (select max(CodPago) from pagos);	 
 end //
+
+
 DELIMITER ;
 
 CREATE TABLE clientes (
@@ -80,7 +85,7 @@ CREATE TABLE clientes (
 INSERT INTO clientes VALUES
 (null,'Lucre', 'Lucre', 'DNI', 111, 'lucre@lucre.com', 112233, true),
 (null,'Joni', 'Joni', 'DNI', 222, 'joni@joni.com', 112233, true),
-(null,'Sara', 'Sara', 'DNI', 333, 'sara@sara.com', 112233, false);
+(null,'Sara', 'Sara', 'DNI', 333, 'sara@sara.com', 112233, true);
 
 CREATE TABLE socios (
   IdSocio int(11),
@@ -137,7 +142,8 @@ constraint fk_pagos foreign key(NCliente) references Clientes(NCliente)
 );
 
 insert into pagos values
-(null, 'Cuota Mensual', '2024/07/07', '2024/08/07', 1, 55);
+(null, 'Cuota Mensual', '2024/10/09', '2024/11/09', 1, 55),
+(null, 'Cuota Mensual + Deuda', '2024/09/30', '2024/10/30',2,33333);
 
 create table cuotamensual(
 Id int auto_increment,

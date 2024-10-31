@@ -114,7 +114,7 @@ namespace PrimerProyecto
                 else
                 {
                     if (doc.cuota.Precio > precio)
-                        cuotaMensual += " + deuda";
+                        cuotaMensual += " + Deuda";
                     doc.cuota.Tipo = cuotaMensual;
                     doc.cuota.NCliente = nCliente;
 

@@ -73,6 +73,7 @@
             btnListar.Size = new Size(206, 80);
             btnListar.TabIndex = 3;
             btnListar.UseVisualStyleBackColor = true;
+            btnListar.Click += btnListar_Click;
             // 
             // frmPrincipal
             // 

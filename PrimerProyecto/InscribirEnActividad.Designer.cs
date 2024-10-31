@@ -39,7 +39,12 @@
             lblFormaDePago = new Label();
             btnIrAPagar = new Button();
             btnVolver = new Button();
+            dgvActividades = new DataGridView();
+            ColumnActividad = new DataGridViewTextBoxColumn();
+            ColumnProfesor = new DataGridViewTextBoxColumn();
+            lblListado = new Label();
             pnFormaPago.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvActividades).BeginInit();
             SuspendLayout();
             // 
             // lbNDocNoSocio
@@ -56,11 +61,11 @@
             txtNoSocio.Location = new Point(250, 68);
             txtNoSocio.Name = "txtNoSocio";
             txtNoSocio.Size = new Size(125, 27);
-            txtNoSocio.TabIndex = 1;
+            txtNoSocio.TabIndex = 0;
             // 
             // btnVerificar
             // 
-            btnVerificar.Location = new Point(159, 167);
+            btnVerificar.Location = new Point(172, 160);
             btnVerificar.Name = "btnVerificar";
             btnVerificar.Size = new Size(129, 29);
             btnVerificar.TabIndex = 2;
@@ -82,7 +87,7 @@
             txtActividad.Location = new Point(250, 107);
             txtActividad.Name = "txtActividad";
             txtActividad.Size = new Size(125, 27);
-            txtActividad.TabIndex = 4;
+            txtActividad.TabIndex = 1;
             // 
             // rbEfectivo
             // 
@@ -116,7 +121,7 @@
             pnFormaPago.Location = new Point(518, 46);
             pnFormaPago.Name = "pnFormaPago";
             pnFormaPago.Size = new Size(250, 125);
-            pnFormaPago.TabIndex = 6;
+            pnFormaPago.TabIndex = 3;
             // 
             // lblFormaDePago
             // 
@@ -130,23 +135,59 @@
             // btnIrAPagar
             // 
             btnIrAPagar.Enabled = false;
-            btnIrAPagar.Location = new Point(63, 271);
+            btnIrAPagar.Location = new Point(69, 409);
             btnIrAPagar.Name = "btnIrAPagar";
             btnIrAPagar.Size = new Size(127, 29);
-            btnIrAPagar.TabIndex = 7;
+            btnIrAPagar.TabIndex = 4;
             btnIrAPagar.Text = "Ir a pagar";
             btnIrAPagar.UseVisualStyleBackColor = true;
             btnIrAPagar.Click += btnIrAPagar_Click;
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(580, 271);
+            btnVolver.Location = new Point(589, 409);
             btnVolver.Name = "btnVolver";
             btnVolver.Size = new Size(148, 29);
-            btnVolver.TabIndex = 8;
+            btnVolver.TabIndex = 5;
             btnVolver.Text = "Volver al menú";
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
+            // 
+            // dgvActividades
+            // 
+            dgvActividades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvActividades.Columns.AddRange(new DataGridViewColumn[] { ColumnActividad, ColumnProfesor });
+            dgvActividades.Location = new Point(69, 236);
+            dgvActividades.Name = "dgvActividades";
+            dgvActividades.RowHeadersWidth = 51;
+            dgvActividades.RowTemplate.Height = 29;
+            dgvActividades.Size = new Size(306, 167);
+            dgvActividades.TabIndex = 6;
+            // 
+            // ColumnActividad
+            // 
+            ColumnActividad.HeaderText = "Actividad";
+            ColumnActividad.MinimumWidth = 6;
+            ColumnActividad.Name = "ColumnActividad";
+            ColumnActividad.ReadOnly = true;
+            ColumnActividad.Width = 125;
+            // 
+            // ColumnProfesor
+            // 
+            ColumnProfesor.HeaderText = "Profesor";
+            ColumnProfesor.MinimumWidth = 6;
+            ColumnProfesor.Name = "ColumnProfesor";
+            ColumnProfesor.ReadOnly = true;
+            ColumnProfesor.Width = 125;
+            // 
+            // lblListado
+            // 
+            lblListado.AutoSize = true;
+            lblListado.Location = new Point(69, 213);
+            lblListado.Name = "lblListado";
+            lblListado.Size = new Size(159, 20);
+            lblListado.TabIndex = 7;
+            lblListado.Text = "Listado de Actividades";
             // 
             // fmrInscribirEnActividad
             // 
@@ -154,6 +195,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(800, 450);
+            Controls.Add(lblListado);
+            Controls.Add(dgvActividades);
             Controls.Add(btnVolver);
             Controls.Add(btnIrAPagar);
             Controls.Add(pnFormaPago);
@@ -165,8 +208,10 @@
             Name = "fmrInscribirEnActividad";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "InscribirEnActividad";
+            Load += fmrInscribirEnActividad_Load;
             pnFormaPago.ResumeLayout(false);
             pnFormaPago.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvActividades).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,5 +229,9 @@
         private Label lblFormaDePago;
         private Button btnIrAPagar;
         private Button btnVolver;
+        private DataGridView dgvActividades;
+        private DataGridViewTextBoxColumn ColumnActividad;
+        private DataGridViewTextBoxColumn ColumnProfesor;
+        private Label lblListado;
     }
 }

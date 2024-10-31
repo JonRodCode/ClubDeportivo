@@ -107,7 +107,6 @@ namespace PrimerProyecto
         private void frmRegistro_Load(object sender, EventArgs e)
         {
             Datos.SociosNoSocios postulante = new Datos.SociosNoSocios();
-
             dtgvPrincipal.DataSource = postulante.verClientes();
         }
 

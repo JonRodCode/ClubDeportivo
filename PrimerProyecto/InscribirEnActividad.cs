@@ -154,5 +154,46 @@ namespace PrimerProyecto
         {
             this.Close();
         }
+
+        private void fmrInscribirEnActividad_Load(object sender, EventArgs e)
+        {
+            MySqlConnection sqlCon = new MySqlConnection();
+            try
+            {
+                string query;
+                sqlCon = Conexion.getInstancia().CrearConcexion();
+                query = "select a.nombre, concat(p.nombre, ' ', p.apellido) from actividades as a inner join profesores as p on a.NProfesor = P.NProfesor;";
+
+                MySqlCommand comando = new MySqlCommand(query, sqlCon);
+                comando.CommandType = CommandType.Text;
+                sqlCon.Open();
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        int renglon = dgvActividades.Rows.Add();
+                        dgvActividades.Rows[renglon].Cells[0].Value = reader.GetString(0);
+                        dgvActividades.Rows[renglon].Cells[1].Value = reader.GetString(1);                        
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo cargar los datos de actividades.");
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                { sqlCon.Close(); }
+            }
+        }
     }
 }

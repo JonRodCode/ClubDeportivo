@@ -39,5 +39,11 @@ namespace PrimerProyecto
             Form inscribir = new fmrInscribirEnActividad();
             inscribir.ShowDialog();
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            Form listado = new fmrListadoDeVencimiento();
+            listado.ShowDialog();
+        }
     }
 }
