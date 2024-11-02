@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComprobante));
             panel1 = new Panel();
             lblComprobante = new Label();
             btnImprimir = new Button();
@@ -62,9 +63,9 @@
             panel1.BackColor = Color.FromArgb(192, 255, 192);
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(lblComprobante);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(78, 176);
             panel1.Name = "panel1";
-            panel1.Size = new Size(785, 61);
+            panel1.Size = new Size(782, 61);
             panel1.TabIndex = 0;
             // 
             // lblComprobante
@@ -79,12 +80,13 @@
             // 
             // btnImprimir
             // 
+            btnImprimir.BackgroundImage = (Image)resources.GetObject("btnImprimir.BackgroundImage");
+            btnImprimir.BackgroundImageLayout = ImageLayout.Stretch;
             btnImprimir.Enabled = false;
-            btnImprimir.Location = new Point(308, 414);
+            btnImprimir.Location = new Point(374, 578);
             btnImprimir.Name = "btnImprimir";
-            btnImprimir.Size = new Size(137, 29);
+            btnImprimir.Size = new Size(189, 57);
             btnImprimir.TabIndex = 1;
-            btnImprimir.Text = "Imprimir";
             btnImprimir.UseVisualStyleBackColor = true;
             btnImprimir.Click += btnImprimir_Click;
             // 
@@ -93,7 +95,7 @@
             panel2.BackColor = Color.FromArgb(192, 255, 192);
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(lblClub);
-            panel2.Location = new Point(12, 79);
+            panel2.Location = new Point(78, 243);
             panel2.Name = "panel2";
             panel2.Size = new Size(388, 90);
             panel2.TabIndex = 1;
@@ -115,7 +117,7 @@
             panel3.Controls.Add(lblFechaActual);
             panel3.Controls.Add(lblDatosClub);
             panel3.Controls.Add(lblFecha);
-            panel3.Location = new Point(406, 79);
+            panel3.Location = new Point(472, 243);
             panel3.Name = "panel3";
             panel3.Size = new Size(388, 90);
             panel3.TabIndex = 2;
@@ -163,7 +165,7 @@
             panel4.Controls.Add(lblFormaDePago);
             panel4.Controls.Add(lblPagoDe);
             panel4.Controls.Add(lblCliente);
-            panel4.Location = new Point(12, 175);
+            panel4.Location = new Point(78, 339);
             panel4.Name = "panel4";
             panel4.Size = new Size(782, 233);
             panel4.TabIndex = 3;
@@ -270,21 +272,23 @@
             // 
             // btnPagar
             // 
-            btnPagar.Location = new Point(91, 414);
+            btnPagar.BackgroundImage = (Image)resources.GetObject("btnPagar.BackgroundImage");
+            btnPagar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPagar.Location = new Point(78, 578);
             btnPagar.Name = "btnPagar";
-            btnPagar.Size = new Size(137, 29);
+            btnPagar.Size = new Size(195, 57);
             btnPagar.TabIndex = 4;
-            btnPagar.Text = "Pagar";
             btnPagar.UseVisualStyleBackColor = true;
             btnPagar.Click += btnPagar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(547, 414);
+            btnCancelar.BackgroundImage = (Image)resources.GetObject("btnCancelar.BackgroundImage");
+            btnCancelar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCancelar.Location = new Point(688, 578);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(137, 29);
+            btnCancelar.Size = new Size(172, 57);
             btnCancelar.TabIndex = 5;
-            btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
@@ -293,7 +297,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1186, 696);
             Controls.Add(btnCancelar);
             Controls.Add(btnPagar);
             Controls.Add(panel4);

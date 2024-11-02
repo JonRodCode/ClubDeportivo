@@ -38,9 +38,11 @@
             // btnRegistrar
             // 
             btnRegistrar.BackgroundImage = (Image)resources.GetObject("btnRegistrar.BackgroundImage");
-            btnRegistrar.Location = new Point(141, 213);
+            btnRegistrar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRegistrar.Location = new Point(123, 160);
+            btnRegistrar.Margin = new Padding(3, 2, 3, 2);
             btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(206, 80);
+            btnRegistrar.Size = new Size(180, 60);
             btnRegistrar.TabIndex = 0;
             btnRegistrar.UseVisualStyleBackColor = true;
             btnRegistrar.Click += btnRegistrar_Click;
@@ -48,9 +50,11 @@
             // btnCobrarCuota
             // 
             btnCobrarCuota.BackgroundImage = (Image)resources.GetObject("btnCobrarCuota.BackgroundImage");
-            btnCobrarCuota.Location = new Point(141, 457);
+            btnCobrarCuota.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCobrarCuota.Location = new Point(123, 343);
+            btnCobrarCuota.Margin = new Padding(3, 2, 3, 2);
             btnCobrarCuota.Name = "btnCobrarCuota";
-            btnCobrarCuota.Size = new Size(206, 80);
+            btnCobrarCuota.Size = new Size(180, 60);
             btnCobrarCuota.TabIndex = 2;
             btnCobrarCuota.UseVisualStyleBackColor = true;
             btnCobrarCuota.Click += btnCobrarCuota_Click;
@@ -58,9 +62,11 @@
             // btnInscribirAActividad
             // 
             btnInscribirAActividad.BackgroundImage = (Image)resources.GetObject("btnInscribirAActividad.BackgroundImage");
-            btnInscribirAActividad.Location = new Point(141, 336);
+            btnInscribirAActividad.BackgroundImageLayout = ImageLayout.Stretch;
+            btnInscribirAActividad.Location = new Point(123, 252);
+            btnInscribirAActividad.Margin = new Padding(3, 2, 3, 2);
             btnInscribirAActividad.Name = "btnInscribirAActividad";
-            btnInscribirAActividad.Size = new Size(206, 80);
+            btnInscribirAActividad.Size = new Size(180, 60);
             btnInscribirAActividad.TabIndex = 1;
             btnInscribirAActividad.UseVisualStyleBackColor = true;
             btnInscribirAActividad.Click += btnInscribirAActividad_Click;
@@ -68,25 +74,29 @@
             // btnListar
             // 
             btnListar.BackgroundImage = (Image)resources.GetObject("btnListar.BackgroundImage");
-            btnListar.Location = new Point(141, 576);
+            btnListar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnListar.Location = new Point(123, 432);
+            btnListar.Margin = new Padding(3, 2, 3, 2);
             btnListar.Name = "btnListar";
-            btnListar.Size = new Size(206, 80);
+            btnListar.Size = new Size(180, 60);
             btnListar.TabIndex = 3;
             btnListar.UseVisualStyleBackColor = true;
             btnListar.Click += btnListar_Click;
             // 
             // frmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(896, 748);
+            ClientSize = new Size(784, 561);
             Controls.Add(btnListar);
             Controls.Add(btnInscribirAActividad);
             Controls.Add(btnCobrarCuota);
             Controls.Add(btnRegistrar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ClubDeportivo";

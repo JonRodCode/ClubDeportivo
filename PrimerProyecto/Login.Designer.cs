@@ -60,6 +60,7 @@
             // btnIngresar
             // 
             btnIngresar.BackgroundImage = (Image)resources.GetObject("btnIngresar.BackgroundImage");
+            btnIngresar.BackgroundImageLayout = ImageLayout.Stretch;
             btnIngresar.Location = new Point(153, 275);
             btnIngresar.Margin = new Padding(2);
             btnIngresar.Name = "btnIngresar";

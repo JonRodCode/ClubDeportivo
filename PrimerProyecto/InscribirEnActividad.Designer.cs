@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmrInscribirEnActividad));
             lbNDocNoSocio = new Label();
             txtNoSocio = new TextBox();
             btnVerificar = new Button();
@@ -50,7 +51,8 @@
             // lbNDocNoSocio
             // 
             lbNDocNoSocio.AutoSize = true;
-            lbNDocNoSocio.Location = new Point(69, 71);
+            lbNDocNoSocio.BackColor = Color.White;
+            lbNDocNoSocio.Location = new Point(65, 161);
             lbNDocNoSocio.Name = "lbNDocNoSocio";
             lbNDocNoSocio.Size = new Size(132, 20);
             lbNDocNoSocio.TabIndex = 0;
@@ -58,25 +60,27 @@
             // 
             // txtNoSocio
             // 
-            txtNoSocio.Location = new Point(250, 68);
+            txtNoSocio.Location = new Point(246, 158);
             txtNoSocio.Name = "txtNoSocio";
             txtNoSocio.Size = new Size(125, 27);
             txtNoSocio.TabIndex = 0;
             // 
             // btnVerificar
             // 
-            btnVerificar.Location = new Point(172, 160);
+            btnVerificar.BackgroundImage = (Image)resources.GetObject("btnVerificar.BackgroundImage");
+            btnVerificar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnVerificar.Location = new Point(242, 234);
             btnVerificar.Name = "btnVerificar";
-            btnVerificar.Size = new Size(129, 29);
+            btnVerificar.Size = new Size(129, 50);
             btnVerificar.TabIndex = 2;
-            btnVerificar.Text = "Verificar";
             btnVerificar.UseVisualStyleBackColor = true;
             btnVerificar.Click += btnVerificar_Click;
             // 
             // lblActividad
             // 
             lblActividad.AutoSize = true;
-            lblActividad.Location = new Point(69, 114);
+            lblActividad.BackColor = Color.White;
+            lblActividad.Location = new Point(65, 204);
             lblActividad.Name = "lblActividad";
             lblActividad.Size = new Size(155, 20);
             lblActividad.TabIndex = 3;
@@ -84,7 +88,7 @@
             // 
             // txtActividad
             // 
-            txtActividad.Location = new Point(250, 107);
+            txtActividad.Location = new Point(246, 197);
             txtActividad.Name = "txtActividad";
             txtActividad.Size = new Size(125, 27);
             txtActividad.TabIndex = 1;
@@ -118,9 +122,9 @@
             pnFormaPago.Controls.Add(rbTarjeta);
             pnFormaPago.Controls.Add(rbEfectivo);
             pnFormaPago.Enabled = false;
-            pnFormaPago.Location = new Point(518, 46);
+            pnFormaPago.Location = new Point(397, 154);
             pnFormaPago.Name = "pnFormaPago";
-            pnFormaPago.Size = new Size(250, 125);
+            pnFormaPago.Size = new Size(178, 125);
             pnFormaPago.TabIndex = 3;
             // 
             // lblFormaDePago
@@ -134,22 +138,24 @@
             // 
             // btnIrAPagar
             // 
+            btnIrAPagar.BackgroundImage = (Image)resources.GetObject("btnIrAPagar.BackgroundImage");
+            btnIrAPagar.BackgroundImageLayout = ImageLayout.Stretch;
             btnIrAPagar.Enabled = false;
-            btnIrAPagar.Location = new Point(69, 409);
+            btnIrAPagar.Location = new Point(409, 326);
             btnIrAPagar.Name = "btnIrAPagar";
-            btnIrAPagar.Size = new Size(127, 29);
+            btnIrAPagar.Size = new Size(166, 73);
             btnIrAPagar.TabIndex = 4;
-            btnIrAPagar.Text = "Ir a pagar";
             btnIrAPagar.UseVisualStyleBackColor = true;
             btnIrAPagar.Click += btnIrAPagar_Click;
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(589, 409);
+            btnVolver.BackgroundImage = Properties.Resources.btn_volver;
+            btnVolver.BackgroundImageLayout = ImageLayout.Stretch;
+            btnVolver.Location = new Point(409, 427);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(148, 29);
+            btnVolver.Size = new Size(166, 68);
             btnVolver.TabIndex = 5;
-            btnVolver.Text = "Volver al menú";
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
@@ -157,7 +163,7 @@
             // 
             dgvActividades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvActividades.Columns.AddRange(new DataGridViewColumn[] { ColumnActividad, ColumnProfesor });
-            dgvActividades.Location = new Point(69, 236);
+            dgvActividades.Location = new Point(65, 326);
             dgvActividades.Name = "dgvActividades";
             dgvActividades.RowHeadersWidth = 51;
             dgvActividades.RowTemplate.Height = 29;
@@ -183,7 +189,8 @@
             // lblListado
             // 
             lblListado.AutoSize = true;
-            lblListado.Location = new Point(69, 213);
+            lblListado.BackColor = Color.White;
+            lblListado.Location = new Point(65, 303);
             lblListado.Name = "lblListado";
             lblListado.Size = new Size(159, 20);
             lblListado.TabIndex = 7;
@@ -194,7 +201,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(809, 601);
             Controls.Add(lblListado);
             Controls.Add(dgvActividades);
             Controls.Add(btnVolver);

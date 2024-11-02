@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmrListadoDeVencimiento));
             dgvListSocios = new DataGridView();
             IdSocio = new DataGridViewTextBoxColumn();
             nomape = new DataGridViewTextBoxColumn();
@@ -44,7 +45,7 @@
             // 
             dgvListSocios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvListSocios.Columns.AddRange(new DataGridViewColumn[] { IdSocio, nomape, TDocC, DocC, mail, celular });
-            dgvListSocios.Location = new Point(34, 107);
+            dgvListSocios.Location = new Point(81, 236);
             dgvListSocios.Name = "dgvListSocios";
             dgvListSocios.RowHeadersWidth = 51;
             dgvListSocios.RowTemplate.Height = 29;
@@ -102,19 +103,22 @@
             // lblListado
             // 
             lblListado.AutoSize = true;
-            lblListado.Location = new Point(168, 54);
+            lblListado.BackColor = Color.White;
+            lblListado.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblListado.Location = new Point(120, 183);
             lblListado.Name = "lblListado";
-            lblListado.Size = new Size(419, 20);
+            lblListado.Size = new Size(643, 31);
             lblListado.TabIndex = 1;
             lblListado.Text = "Listado de socios a los que se les vence la cuota el dia de hoy.";
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(608, 411);
+            btnVolver.BackgroundImage = (Image)resources.GetObject("btnVolver.BackgroundImage");
+            btnVolver.BackgroundImageLayout = ImageLayout.Stretch;
+            btnVolver.Location = new Point(612, 543);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(145, 29);
+            btnVolver.Size = new Size(189, 67);
             btnVolver.TabIndex = 2;
-            btnVolver.Text = "Volver al Menú";
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
@@ -123,7 +127,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1116, 686);
             Controls.Add(btnVolver);
             Controls.Add(lblListado);
             Controls.Add(dgvListSocios);
