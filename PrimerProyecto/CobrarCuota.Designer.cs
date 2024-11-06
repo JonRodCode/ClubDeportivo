@@ -57,7 +57,7 @@
             txtNumSocio.Location = new Point(190, 355);
             txtNumSocio.Name = "txtNumSocio";
             txtNumSocio.Size = new Size(125, 27);
-            txtNumSocio.TabIndex = 1;
+            txtNumSocio.TabIndex = 0;
             // 
             // rbTarjeta
             // 
@@ -88,7 +88,7 @@
             btnVolver.Location = new Point(465, 479);
             btnVolver.Name = "btnVolver";
             btnVolver.Size = new Size(147, 65);
-            btnVolver.TabIndex = 3;
+            btnVolver.TabIndex = 4;
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
@@ -100,7 +100,7 @@
             btnIrAPagar.Location = new Point(284, 479);
             btnIrAPagar.Name = "btnIrAPagar";
             btnIrAPagar.Size = new Size(141, 65);
-            btnIrAPagar.TabIndex = 4;
+            btnIrAPagar.TabIndex = 3;
             btnIrAPagar.UseVisualStyleBackColor = true;
             btnIrAPagar.Click += btnPagar_Click;
             // 
@@ -111,7 +111,7 @@
             btnVerificar.Location = new Point(101, 475);
             btnVerificar.Name = "btnVerificar";
             btnVerificar.Size = new Size(141, 69);
-            btnVerificar.TabIndex = 6;
+            btnVerificar.TabIndex = 1;
             btnVerificar.UseVisualStyleBackColor = true;
             btnVerificar.Click += btnVerificar_Click;
             // 
@@ -125,7 +125,7 @@
             pnFormaPago.Location = new Point(362, 306);
             pnFormaPago.Name = "pnFormaPago";
             pnFormaPago.Size = new Size(250, 125);
-            pnFormaPago.TabIndex = 7;
+            pnFormaPago.TabIndex = 2;
             // 
             // lblFormaDePago
             // 
@@ -143,7 +143,7 @@
             btnCambiar.Location = new Point(101, 475);
             btnCambiar.Name = "btnCambiar";
             btnCambiar.Size = new Size(141, 69);
-            btnCambiar.TabIndex = 8;
+            btnCambiar.TabIndex = 5;
             btnCambiar.Text = "Cambiar";
             btnCambiar.UseVisualStyleBackColor = false;
             btnCambiar.Visible = false;

@@ -121,7 +121,7 @@
   <data name="btnVerificar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGoAAAAmCAYAAAAsuw6AAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAABA9JREFUeF7tm0trFEEQx/0ofhJZbxHxJD5OoiDiIQdBJAdBxBy8eVAP4iEg4sEE
+        DAAACwwBP0AiyAAABA9JREFUeF7tm0trFEEQx/0ofhJZbxHxJD5OoiDiIQdBJAdBxBy8eVAP4iEg4sEE
         FCEIgiiih0SIggrmZWLeYb3kG4z7G61NTaefG5AM1uHH9vT0Y7b+U9XVvcmh7q+dwz06xsEGoW72qIyD
         jQnVEkyolmBCtQQTqiXsS6iFxZXq+fRkdW16ogF13PP1MQZjIKHu9sToZEJb3xhGGUVCPXJEKAEv841p
         5JEt1CWP8YemJqrR3qeEOgmFeBH33PaERd/YRposoc44RkeEmU9fvG01tHEFYyxfWyNOUig8Rht6kDXH
@@ -144,7 +144,7 @@
   <data name="btnIrAPagar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGoAAAAmCAYAAAAsuw6AAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAA+lJREFUeF7tmz2LFEEQhv0p/hJZMw0MRUMDMTIwEQMT4QIzA80MBAOTu0AEMRJB
+        DAAACwwBP0AiyAAAA+lJREFUeF7tmz2LFEEQhv0p/hJZMw0MRUMDMTIwEQMT4QIzA80MBAOTu0AEMRJB
         TO6CM9DAjzs8Pw6VM7l/MO4z+q61RXX3zB7IDVTwsLvd1TU99XZV98zpiYNfhyfnzJLjDULdmtMlx5sU
         aiKkUBMhhZoIKdREOJJQO7tfusdbT7vrWxtL0EZfNCZZjZWEujsXYzYQbCMfyThGCfXQiTAGsizymQxj
         sFBXguCf2dzo1uafKnUqhWQRfd6eshj5TtoMEuqCCzoibL9+E9pasPGC4SuyTeo0hSJjbKBX2XP8nobP
@@ -164,6 +164,12 @@
         5kPDAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="ColumnActividad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnProfesor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="ColumnActividad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

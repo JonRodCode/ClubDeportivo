@@ -204,7 +204,7 @@
             btnCambiar.Location = new Point(242, 234);
             btnCambiar.Name = "btnCambiar";
             btnCambiar.Size = new Size(129, 50);
-            btnCambiar.TabIndex = 8;
+            btnCambiar.TabIndex = 6;
             btnCambiar.Text = "Cambiar";
             btnCambiar.UseVisualStyleBackColor = false;
             btnCambiar.Visible = false;
