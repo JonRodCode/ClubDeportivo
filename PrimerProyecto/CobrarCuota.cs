@@ -37,13 +37,7 @@ namespace PrimerProyecto
             {
                 MessageBox.Show("Ingrese un número de socio válido", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (btnVerificar.Text == "Cambiar")
-            {
-                txtNumSocio.Enabled = true;
-                btnVerificar.Text = "Verificar";
-                btnIrAPagar.Enabled = false;
-                pnFormaPago.Enabled = false;
-            }
+
 
             else
             {
@@ -71,7 +65,8 @@ namespace PrimerProyecto
                         precio = reader.GetDecimal(3);
 
                         txtNumSocio.Enabled = false;
-                        btnVerificar.Text = "Cambiar";
+                        btnVerificar.Visible = false;
+                        btnCambiar.Visible = true;
                         btnIrAPagar.Enabled = true;
                         pnFormaPago.Enabled = true;
 
@@ -127,9 +122,9 @@ namespace PrimerProyecto
                         doc.formaDePago = "Efectivo";
                     else
                         doc.formaDePago = "Tarjeta";
-                                       
+
                     doc.cuota.Tipo = cuotaMensual;
-                    doc.cuota.NCliente = nCliente;                    
+                    doc.cuota.NCliente = nCliente;
 
                     doc.ShowDialog();
                     this.Close();
@@ -143,6 +138,14 @@ namespace PrimerProyecto
 
         }
 
+        private void btnCambiar_Click(object sender, EventArgs e)
+        {
+            txtNumSocio.Enabled = true;
+            btnVerificar.Visible = true;
+            btnCambiar.Visible = false;
+            btnIrAPagar.Enabled = false;
+            pnFormaPago.Enabled = false;
 
+        }
     }
 }

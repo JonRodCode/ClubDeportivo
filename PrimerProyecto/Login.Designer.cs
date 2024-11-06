@@ -36,10 +36,10 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(118, 203);
-            txtUsuario.Margin = new Padding(2);
+            txtUsuario.Location = new Point(135, 271);
+            txtUsuario.Margin = new Padding(2, 3, 2, 3);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(193, 23);
+            txtUsuario.Size = new Size(220, 27);
             txtUsuario.TabIndex = 1;
             txtUsuario.Text = "USUARIO";
             txtUsuario.TextChanged += txtUsuario_TextChanged;
@@ -48,10 +48,10 @@
             // 
             // txtClave
             // 
-            txtClave.Location = new Point(118, 236);
-            txtClave.Margin = new Padding(2);
+            txtClave.Location = new Point(135, 315);
+            txtClave.Margin = new Padding(2, 3, 2, 3);
             txtClave.Name = "txtClave";
-            txtClave.Size = new Size(193, 23);
+            txtClave.Size = new Size(220, 27);
             txtClave.TabIndex = 2;
             txtClave.Text = "CONTRASEÑA";
             txtClave.Enter += txtClave_Enter;
@@ -61,26 +61,28 @@
             // 
             btnIngresar.BackgroundImage = (Image)resources.GetObject("btnIngresar.BackgroundImage");
             btnIngresar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnIngresar.Location = new Point(153, 275);
-            btnIngresar.Margin = new Padding(2);
+            btnIngresar.Location = new Point(175, 367);
+            btnIngresar.Margin = new Padding(2, 3, 2, 3);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(126, 51);
+            btnIngresar.Size = new Size(144, 68);
             btnIngresar.TabIndex = 3;
             btnIngresar.UseVisualStyleBackColor = true;
             btnIngresar.Click += btnIngresar_Click;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(735, 504);
+            ClientSize = new Size(840, 672);
             Controls.Add(btnIngresar);
             Controls.Add(txtClave);
             Controls.Add(txtUsuario);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(2);
+            Margin = new Padding(2, 3, 2, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

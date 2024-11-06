@@ -44,6 +44,7 @@
             ColumnActividad = new DataGridViewTextBoxColumn();
             ColumnProfesor = new DataGridViewTextBoxColumn();
             lblListado = new Label();
+            btnCambiar = new Button();
             pnFormaPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvActividades).BeginInit();
             SuspendLayout();
@@ -196,6 +197,19 @@
             lblListado.TabIndex = 7;
             lblListado.Text = "Listado de Actividades";
             // 
+            // btnCambiar
+            // 
+            btnCambiar.BackColor = Color.White;
+            btnCambiar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCambiar.Location = new Point(242, 234);
+            btnCambiar.Name = "btnCambiar";
+            btnCambiar.Size = new Size(129, 50);
+            btnCambiar.TabIndex = 8;
+            btnCambiar.Text = "Cambiar";
+            btnCambiar.UseVisualStyleBackColor = false;
+            btnCambiar.Visible = false;
+            btnCambiar.Click += btnCambiar_Click;
+            // 
             // fmrInscribirEnActividad
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -204,6 +218,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(809, 601);
+            Controls.Add(btnCambiar);
             Controls.Add(lblListado);
             Controls.Add(dgvActividades);
             Controls.Add(btnVolver);
@@ -214,6 +229,8 @@
             Controls.Add(btnVerificar);
             Controls.Add(txtNoSocio);
             Controls.Add(lbNDocNoSocio);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "fmrInscribirEnActividad";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "InscribirEnActividad";
@@ -242,5 +259,6 @@
         private DataGridViewTextBoxColumn ColumnActividad;
         private DataGridViewTextBoxColumn ColumnProfesor;
         private Label lblListado;
+        private Button btnCambiar;
     }
 }

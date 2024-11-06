@@ -133,6 +133,8 @@
             Controls.Add(btnVolver);
             Controls.Add(lblListado);
             Controls.Add(dgvListSocios);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "fmrListadoDeVencimiento";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ListadoDeVencimiento";

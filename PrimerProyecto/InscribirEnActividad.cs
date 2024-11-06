@@ -37,14 +37,7 @@ namespace PrimerProyecto
             {
                 MessageBox.Show("Ingrese un número de documento válido.", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (btnVerificar.Text == "Cambiar")
-            {
-                txtNoSocio.Enabled = true;
-                txtActividad.Enabled = true;
-                btnVerificar.Text = "Verificar";
-                btnIrAPagar.Enabled = false;
-                pnFormaPago.Enabled = false;
-            }
+
             else
             {
                 MySqlConnection sqlCon = new MySqlConnection();
@@ -70,13 +63,22 @@ namespace PrimerProyecto
                         reader.Read();
                         if (reader.GetInt32(2) == 1)
                         {
+                            actividad = txtActividad.Text;
+                            Actividad actividadActual = new Actividad();
+                            if (actividadActual.verificarCupo(actividad) == 0)
+                            {
+                                MessageBox.Show("No hay cupo disponible en esta actividad.", "AVISO DEL SISTEMA",
+                                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+
                             nCliente = reader.GetInt32(0);
                             nombreApellido = reader.GetString(1);
-                            actividad = txtActividad.Text;
 
                             txtNoSocio.Enabled = false;
                             txtActividad.Enabled = false;
-                            btnVerificar.Text = "Cambiar";
+                            btnVerificar.Visible = false;
+                            btnCambiar.Visible = true;
                             btnIrAPagar.Enabled = true;
                             pnFormaPago.Enabled = true;
 
@@ -87,7 +89,7 @@ namespace PrimerProyecto
                         else
                         {
                             MessageBox.Show("Actividad inexistente.", "AVISO DEL SISTEMA",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         }
                     }
@@ -95,7 +97,7 @@ namespace PrimerProyecto
                     else
                     {
                         MessageBox.Show("Documento inexistente.", "AVISO DEL SISTEMA",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
@@ -175,7 +177,7 @@ namespace PrimerProyecto
                     {
                         int renglon = dgvActividades.Rows.Add();
                         dgvActividades.Rows[renglon].Cells[0].Value = reader.GetString(0);
-                        dgvActividades.Rows[renglon].Cells[1].Value = reader.GetString(1);                        
+                        dgvActividades.Rows[renglon].Cells[1].Value = reader.GetString(1);
                     }
                 }
                 else
@@ -194,6 +196,16 @@ namespace PrimerProyecto
                 if (sqlCon.State == ConnectionState.Open)
                 { sqlCon.Close(); }
             }
+        }
+
+        private void btnCambiar_Click(object sender, EventArgs e)
+        {
+
+            txtNoSocio.Enabled = true;
+            txtActividad.Enabled = true;
+            btnVerificar.Visible = true;
+            btnCambiar.Visible = false;
+            pnFormaPago.Enabled = false;
         }
     }
 }

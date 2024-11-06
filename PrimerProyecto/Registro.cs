@@ -33,13 +33,19 @@ namespace PrimerProyecto
             DataTable tabla = new DataTable();
 
             if (txtNombre.Text == "" || txtApellido.Text == "" || cboTipo.SelectedItem == null || txtDocumento.Text == "" || txtMail.Text == "" || txtCelular.Text == "")
-                MessageBox.Show("Debe completar todos los campos!");
+                MessageBox.Show("Debe completar todos los campos!", "AVISO DEL SISTEMA",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
 
             else if (!(Validaciones.soloNumeros(txtDocumento.Text) && Validaciones.soloNumeros(txtCelular.Text)))
-                MessageBox.Show("Los campos Documento y Celular solo deben llevar números");
+                MessageBox.Show("Los campos Documento y Celular solo deben llevar números", "AVISO DEL SISTEMA",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
 
             else if (!chkApto.Checked)
-                MessageBox.Show("Por favor, ingrese el Apto Físico.");
+                MessageBox.Show("Por favor, ingrese el Apto Físico.", "AVISO DEL SISTEMA",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Question);
 
             else
             {
@@ -90,9 +96,9 @@ namespace PrimerProyecto
                     else
                     {
                         if (esSocio)
-                        MessageBox.Show("Se almacenó con exito con el Nro de Socio: " + respuesta, "AVISO DEL SISTEMA",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Question);
+                            MessageBox.Show("Se almacenó con exito con el Nro de Socio: " + respuesta, "AVISO DEL SISTEMA",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Question);
                         else
                             MessageBox.Show("Se almacenó con exito.", "AVISO DEL SISTEMA",
                         MessageBoxButtons.OK,
@@ -115,6 +121,6 @@ namespace PrimerProyecto
             this.Close();
         }
 
-        
+
     }
 }

@@ -21,6 +21,11 @@ CREATE PROCEDURE IngresoLogin (IN Usu VARCHAR(20), IN Pass VARCHAR(15))   begin
 			and Activo = 1; 
 end//
 
+CREATE PROCEDURE ActualizarCupo (IN NombreActividad VARCHAR(50))
+begin
+	update Actividades set cupo = cupo - 1 where Nombre like NombreActividad;
+end //
+
 CREATE PROCEDURE NuevoCliente (IN Nom VARCHAR(30), IN Ape VARCHAR(40), IN Tip VARCHAR(20), IN Doc INT,
 IN Mail varchar(80),IN Celular int(20), IN AptoFisico boolean, IN EsSocio boolean, OUT rta INT) 
 begin
@@ -172,14 +177,15 @@ Id int auto_increment,
 Nombre varchar(50),
 Precio decimal(20,2),
 NProfesor int,
+Cupo int,
 constraint pk_actividad primary key (Id)
 );
 
 insert into actividades values
-(null, 'Tenis', 3934.1, 2),
-(null, 'Futbol', 5401.2, 3),
-(null, 'Basquet', 4608.3, 4),
-(null, 'MiniGolf', 9925.4, 1)
+(null, 'Tenis', 3934.1, 2, 0),
+(null, 'Futbol', 5401.2, 3, 10),
+(null, 'Basquet', 4608.3, 4, 10),
+(null, 'MiniGolf', 9925.4, 1, 18)
 ;
 
 

@@ -97,6 +97,8 @@ namespace PrimerProyecto
                 btnCancelar.Enabled = false;
                 btnPagar.Enabled = false;
                 btnImprimir.Enabled = true;
+                Actividad actividad = new Actividad();
+                actividad.actualizarCupo(nombreActividad);
             }
 
             catch (Exception ex)

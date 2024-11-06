@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 using PrimerProyecto.Entidades;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace PrimerProyecto.Datos
             {
                 string query;
                 sqlCon = Conexion.getInstancia().CrearConcexion();
-                query = ("select precio from actividades where nombre like '" + actividad +"'");
+                query = ("select precio from actividades where nombre like '" + actividad + "'");
 
                 MySqlCommand comando = new MySqlCommand(query, sqlCon);
                 comando.CommandType = CommandType.Text;
@@ -44,5 +45,62 @@ namespace PrimerProyecto.Datos
                 { sqlCon.Close(); };
             }
         }
+
+        public int verificarCupo(string actividad)
+        {
+            MySqlConnection sqlCon = new MySqlConnection();
+            int cupo;
+            try
+            {
+                string query;
+                sqlCon = Conexion.getInstancia().CrearConcexion();
+                query = ("select cupo from actividades where nombre like '" + actividad + "'");
+
+                MySqlCommand comando = new MySqlCommand(query, sqlCon);
+                comando.CommandType = CommandType.Text;
+                sqlCon.Open();
+                MySqlDataReader reader;
+                reader = comando.ExecuteReader();
+                reader.Read();
+                cupo = reader.GetInt32(0);
+                return cupo;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                { sqlCon.Close(); };
+            }
+        }
+
+        internal void actualizarCupo(string nombreActividad)
+        {
+            MySqlConnection sqlCon = new MySqlConnection();
+            try
+            {
+                sqlCon = Conexion.getInstancia().CrearConcexion();
+                MySqlCommand comando = new MySqlCommand("ActualizarCupo", sqlCon);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("NombreActividad", MySqlDbType.VarChar).Value = nombreActividad;      
+                sqlCon.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                { sqlCon.Close(); };
+            }
+            
+        }    
     }
 }

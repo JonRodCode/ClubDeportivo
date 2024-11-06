@@ -38,6 +38,7 @@
             btnVerificar = new Button();
             pnFormaPago = new Panel();
             lblFormaDePago = new Label();
+            btnCambiar = new Button();
             pnFormaPago.SuspendLayout();
             SuspendLayout();
             // 
@@ -135,6 +136,19 @@
             lblFormaDePago.TabIndex = 0;
             lblFormaDePago.Text = "Forma de pago";
             // 
+            // btnCambiar
+            // 
+            btnCambiar.BackColor = Color.White;
+            btnCambiar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCambiar.Location = new Point(101, 475);
+            btnCambiar.Name = "btnCambiar";
+            btnCambiar.Size = new Size(141, 69);
+            btnCambiar.TabIndex = 8;
+            btnCambiar.Text = "Cambiar";
+            btnCambiar.UseVisualStyleBackColor = false;
+            btnCambiar.Visible = false;
+            btnCambiar.Click += btnCambiar_Click;
+            // 
             // frmCobrarCuota
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -143,12 +157,15 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(912, 787);
+            Controls.Add(btnCambiar);
             Controls.Add(pnFormaPago);
             Controls.Add(btnVerificar);
             Controls.Add(btnIrAPagar);
             Controls.Add(btnVolver);
             Controls.Add(txtNumSocio);
             Controls.Add(lblNumSocio);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmCobrarCuota";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CobrarCuota";
@@ -169,5 +186,6 @@
         private Button btnVerificar;
         private Panel pnFormaPago;
         private Label lblFormaDePago;
+        private Button btnCambiar;
     }
 }

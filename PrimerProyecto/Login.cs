@@ -67,7 +67,9 @@ namespace PrimerProyecto
             }
             else
             {
-                MessageBox.Show("Usuario y/o password incorrecto");
+                MessageBox.Show("Usuario y/o password incorrecto", "AVISO DEL SISTEMA",
+                    MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
             }
         }
     }

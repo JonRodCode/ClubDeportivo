@@ -138,27 +138,26 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnVolver.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGoAAAAmCAYAAAAsuw6AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAARPSURBVHhe7Zs9axVBFIb9KfklEjstLEUrURCxSCGIpLAR
-        UoiFFmohFoKFTVKIEARBFNEiKWKhhR+J+dAkSmzyD9b7rHkv5849s7uzdy/m6hQPd2fmzMx63j0zZyZ4
-        ZO/X/nTm0DOFUEXm0HM9CzUZZKEmhCzUhJCFmhC6FWrl3fvizvJCcTXgyfJisbq25fbJNKIboRBnugHH
-        lxZKW2+MTCWjCUWkeII04eXyG3fMjEt7oeYc5ytitNQBz6Vtry20p94bOzNEO6FOB05HIPYnz9aCTSgY
-        Y3m2mQHShQr3ozZ7ThdjnPpypjj68VjxYvd1WeaXMvUffn4uZtYul2XgmbqlHytl+cSnk/1xHn+f79uo
-        Tn0ffHvYH8Pi1WtejdExaUKxr4zqYBGKlbpnyVm3N+8OlSWihTpPKKAMG3vbA2XZh8QEnNu4MTBuh6QJ
-        xRInx8b2l8Wd58W9rftRaJftwD6XuATy9eIcBKAcRgH1OB4knNpCoXAw9USXInN2/VpUWCsg42vcc6sX
-        Buw6pKVQEae+2n3b/wdUgZ362D0rNapwDOPZZU9Ow9GhXUyop9vPynoEs6LFIipWr+geA2lCkcE96jm0
-        6vB6c/NWcWltJgrt1p7xJNTFHratDvsl80tZTk+JKKAOsFV7k4gSY4wmiAuFGHIgtwueTVdoHvDaY2j5
-        EziQegljoS4WCYipSAJFY8xeggM2CMkzUWjfr0N8oaxIbRyYik33vfYqtDchhOrqsr4QhNLyCXJ4E6Ho
-        y5LHM+9AWe/RIcNC/TnrzA+IBDgzvMODMKlISSYE42geltewPeMI1fZaiL6IoC+tilCsLFQtw0KFZ6VG
-        HGSBG3s7xZWvs24SIWjHzs6ZharF36PCwyhL4TgvUcn2NFdVRumhxIF9SHXa3NljrK2we4z2I41DX9tu
-        0Z6FjfYiO5faNE/deyTgCwVWrHHfx2kePgivPYZNAEBXOHUOskKQ7dnskb51QoHOTH9dKGAZanLZaklN
-        Jsrk5UAoDtS2rQ5lW0qtcTD1TYXCjkjS2YsyqN0emkFi0Ac7osrOpTFkb9vsOC2oFipEVz6xO742yYRN
-        zVPvDkOH6dBZ5yAJoYMyQqs/v15E0SYxeOYjATsXv5Q1T917JJAmVN11D0nC2dXz5cvFoF3JRJi4hONV
-        ES57gmWszkESQhGJPXtcKFQsorDTx2Hn4lfPtqwleQTaRZRI3fgt4aE6NZrk5BCcLOdZWN7UV0JQJ1vq
-        qiIKrFDhO9CmhMRCneYdgTShwDoX2og1dPPRIlmRU4gsyvZiNkUo3WDQP1WocI8icmiTPc8dRBOkC1U6
-        Obi5SDn7eAfqUSLzPyFdKPAOxWRs3IR79lDekps9TozzfPYP0U4oIArsHxIHoN7i2NA3R1Jj2gsl7N+T
-        mlIVeRmX0YUSLGHlnZ0XQb062vIy15ruhMqMlSzUhJCFmhCyUBNCKZT3n3szh4r9qd/zch5Qm1jqPQAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAGoAAAAmCAYAAAAsuw6AAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAABE9JREFUeF7tmz1rFUEUhv0p+SUSOy0sRStRELFIIYiksBFSiIUWaiEWgoVNUogQ
+        BEEU0SIpYqGFH4n50CRKbPIP1vuseS/nzj2zu7N3L+bqFA93Z+bMzHrePTNnJnhk79f+dObQM4VQRebQ
+        cz0LNRlkoSaELNSEkIWaELoVauXd++LO8kJxNeDJ8mKxurbl9sk0ohuhEGe6AceXFkpbb4xMJaMJRaR4
+        gjTh5fIbd8yMS3uh5hznK2K01AHPpW2vLbSn3hs7M0Q7oU4HTkcg9ifP1oJNKBhjebaZAdKFCvejNntO
+        F2Oc+nKmOPrxWPFi93VZ5pcy9R9+fi5m1i6XZeCZuqUfK2X5xKeT/XEef5/v26hOfR98e9gfw+LVa16N
+        0TFpQrGvjOpgEYqVumfJWbc37w6VJaKFOk8ooAwbe9sDZdmHxASc27gxMG6HpAnFEifHxvaXxZ3nxb2t
+        +1Fol+3APpe4BPL14hwEoBxGAfU4HiSc2kKhcDD1RJcic3b9WlRYKyDja9xzqxcG7DqkpVARp77afdv/
+        B1SBnfrYPSs1qnAM49llT07D0aFdTKin28/KegSzosUiKlav6B4DaUKRwT3qObTq8Hpz81ZxaW0mCu3W
+        nvEk1MUetq0O+yXzS1lOT4kooA6wVXuTiBJjjCaIC4UYciC3C55NV2ge8NpjaPkTOJB6CWOhLhYJiKlI
+        AkVjzF6CAzYIyTNRaN+vQ3yhrEhtHJiKTfe99iq0NyGE6uqyvhCE0vIJcngToejLkscz70BZ79Ehw0L9
+        OevMD4gEODO8w4MwqUhJJgTjaB6W17A94wjV9lqIvoigL62KUKwsVC3DQoVnpUYcZIEbezvFla+zbhIh
+        aMfOzpmFqsXfo8LDKEvhOC9RyfY0V1VG6aHEgX1Iddrc2WOsrbB7jPYjjUNf227RnoWN9iI7l9o0T917
+        JOALBVascd/HaR4+CK89hk0AQFc4dQ6yQpDt2eyRvnVCgc5Mf10oYBlqctlqSU0myuTlQCgO1LatDmVb
+        Sq1xMPVNhcKOSNLZizKo3R6aQWLQBzuiys6lMWRv2+w4LagWKkRXPrE7vjbJhE3NU+8OQ4fp0FnnIAmh
+        gzJCqz+/XkTRJjF45iMBOxe/lDVP3XskkCZU3XUPScLZ1fPly8WgXclEmLiE41URLnuCZazOQRJCEYk9
+        e1woVCyisNPHYefiV8+2rCV5BNpFlEjd+C3hoTo1muTkEJws51lY3tRXQlAnW+qqIgqsUOE70KaExEKd
+        5h2BNKHAOhfaiDV089EiWZFTiCzK9mI2RSjdYNA/VahwjyJyaJM9zx1EE6QLVTo5uLlIOft4B+pRIvM/
+        IV0o8A7FZGzchHv2UN6Smz1OjPN89g/RTiggCuwfEgeg3uLY0DdHUmPaCyXs35OaUhV5GZfRhRIsYeWd
+        nRdBvTra8jLXmu6EyoyVLNSEkIWaELJQE0IplPefezOHiv2p3/NyHlCbWOo9AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
