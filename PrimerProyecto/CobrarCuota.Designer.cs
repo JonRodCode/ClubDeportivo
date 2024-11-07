@@ -46,25 +46,27 @@
             // 
             lblNumSocio.AutoSize = true;
             lblNumSocio.BackColor = Color.White;
-            lblNumSocio.Location = new Point(104, 360);
+            lblNumSocio.Location = new Point(91, 270);
             lblNumSocio.Name = "lblNumSocio";
-            lblNumSocio.Size = new Size(88, 20);
+            lblNumSocio.Size = new Size(69, 15);
             lblNumSocio.TabIndex = 0;
             lblNumSocio.Text = "N° de Socio";
             // 
             // txtNumSocio
             // 
-            txtNumSocio.Location = new Point(190, 355);
+            txtNumSocio.Location = new Point(166, 266);
+            txtNumSocio.Margin = new Padding(3, 2, 3, 2);
             txtNumSocio.Name = "txtNumSocio";
-            txtNumSocio.Size = new Size(125, 27);
+            txtNumSocio.Size = new Size(110, 23);
             txtNumSocio.TabIndex = 0;
             // 
             // rbTarjeta
             // 
             rbTarjeta.AutoSize = true;
-            rbTarjeta.Location = new Point(49, 77);
+            rbTarjeta.Location = new Point(43, 58);
+            rbTarjeta.Margin = new Padding(3, 2, 3, 2);
             rbTarjeta.Name = "rbTarjeta";
-            rbTarjeta.Size = new Size(74, 24);
+            rbTarjeta.Size = new Size(59, 19);
             rbTarjeta.TabIndex = 1;
             rbTarjeta.TabStop = true;
             rbTarjeta.Text = "Tarjeta";
@@ -73,9 +75,10 @@
             // rbEfectivo
             // 
             rbEfectivo.AutoSize = true;
-            rbEfectivo.Location = new Point(49, 48);
+            rbEfectivo.Location = new Point(43, 36);
+            rbEfectivo.Margin = new Padding(3, 2, 3, 2);
             rbEfectivo.Name = "rbEfectivo";
-            rbEfectivo.Size = new Size(83, 24);
+            rbEfectivo.Size = new Size(67, 19);
             rbEfectivo.TabIndex = 0;
             rbEfectivo.TabStop = true;
             rbEfectivo.Text = "Efectivo";
@@ -85,9 +88,10 @@
             // 
             btnVolver.BackgroundImage = (Image)resources.GetObject("btnVolver.BackgroundImage");
             btnVolver.BackgroundImageLayout = ImageLayout.Stretch;
-            btnVolver.Location = new Point(465, 479);
+            btnVolver.Location = new Point(407, 359);
+            btnVolver.Margin = new Padding(3, 2, 3, 2);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(147, 65);
+            btnVolver.Size = new Size(129, 49);
             btnVolver.TabIndex = 4;
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
@@ -97,9 +101,10 @@
             btnIrAPagar.BackgroundImage = (Image)resources.GetObject("btnIrAPagar.BackgroundImage");
             btnIrAPagar.BackgroundImageLayout = ImageLayout.Stretch;
             btnIrAPagar.Enabled = false;
-            btnIrAPagar.Location = new Point(284, 479);
+            btnIrAPagar.Location = new Point(248, 359);
+            btnIrAPagar.Margin = new Padding(3, 2, 3, 2);
             btnIrAPagar.Name = "btnIrAPagar";
-            btnIrAPagar.Size = new Size(141, 65);
+            btnIrAPagar.Size = new Size(123, 49);
             btnIrAPagar.TabIndex = 3;
             btnIrAPagar.UseVisualStyleBackColor = true;
             btnIrAPagar.Click += btnPagar_Click;
@@ -108,9 +113,10 @@
             // 
             btnVerificar.BackgroundImage = (Image)resources.GetObject("btnVerificar.BackgroundImage");
             btnVerificar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnVerificar.Location = new Point(101, 475);
+            btnVerificar.Location = new Point(88, 356);
+            btnVerificar.Margin = new Padding(3, 2, 3, 2);
             btnVerificar.Name = "btnVerificar";
-            btnVerificar.Size = new Size(141, 69);
+            btnVerificar.Size = new Size(123, 52);
             btnVerificar.TabIndex = 1;
             btnVerificar.UseVisualStyleBackColor = true;
             btnVerificar.Click += btnVerificar_Click;
@@ -122,41 +128,43 @@
             pnFormaPago.Controls.Add(lblFormaDePago);
             pnFormaPago.Controls.Add(rbEfectivo);
             pnFormaPago.Enabled = false;
-            pnFormaPago.Location = new Point(362, 306);
+            pnFormaPago.Location = new Point(317, 230);
+            pnFormaPago.Margin = new Padding(3, 2, 3, 2);
             pnFormaPago.Name = "pnFormaPago";
-            pnFormaPago.Size = new Size(250, 125);
+            pnFormaPago.Size = new Size(219, 94);
             pnFormaPago.TabIndex = 2;
             // 
             // lblFormaDePago
             // 
             lblFormaDePago.AutoSize = true;
-            lblFormaDePago.Location = new Point(15, 9);
+            lblFormaDePago.Location = new Point(13, 7);
             lblFormaDePago.Name = "lblFormaDePago";
-            lblFormaDePago.Size = new Size(111, 20);
+            lblFormaDePago.Size = new Size(87, 15);
             lblFormaDePago.TabIndex = 0;
             lblFormaDePago.Text = "Forma de pago";
             // 
             // btnCambiar
             // 
             btnCambiar.BackColor = Color.White;
+            btnCambiar.BackgroundImage = (Image)resources.GetObject("btnCambiar.BackgroundImage");
             btnCambiar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCambiar.Location = new Point(101, 475);
+            btnCambiar.Location = new Point(88, 356);
+            btnCambiar.Margin = new Padding(3, 2, 3, 2);
             btnCambiar.Name = "btnCambiar";
-            btnCambiar.Size = new Size(141, 69);
+            btnCambiar.Size = new Size(123, 52);
             btnCambiar.TabIndex = 5;
-            btnCambiar.Text = "Cambiar";
             btnCambiar.UseVisualStyleBackColor = false;
             btnCambiar.Visible = false;
             btnCambiar.Click += btnCambiar_Click;
             // 
             // frmCobrarCuota
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(912, 787);
+            ClientSize = new Size(798, 590);
             Controls.Add(btnCambiar);
             Controls.Add(pnFormaPago);
             Controls.Add(btnVerificar);
@@ -164,6 +172,7 @@
             Controls.Add(btnVolver);
             Controls.Add(txtNumSocio);
             Controls.Add(lblNumSocio);
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmCobrarCuota";

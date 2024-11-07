@@ -63,18 +63,19 @@
             panel1.BackColor = Color.FromArgb(192, 255, 192);
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(lblComprobante);
-            panel1.Location = new Point(23, 46);
+            panel1.Location = new Point(17, 26);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(782, 61);
+            panel1.Size = new Size(684, 46);
             panel1.TabIndex = 0;
             // 
             // lblComprobante
             // 
             lblComprobante.AutoSize = true;
             lblComprobante.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            lblComprobante.Location = new Point(245, 12);
+            lblComprobante.Location = new Point(210, 9);
             lblComprobante.Name = "lblComprobante";
-            lblComprobante.Size = new Size(267, 35);
+            lblComprobante.Size = new Size(210, 28);
             lblComprobante.TabIndex = 0;
             lblComprobante.Text = "Comprobante de Pago";
             // 
@@ -83,9 +84,10 @@
             btnImprimir.BackgroundImage = (Image)resources.GetObject("btnImprimir.BackgroundImage");
             btnImprimir.BackgroundImageLayout = ImageLayout.Stretch;
             btnImprimir.Enabled = false;
-            btnImprimir.Location = new Point(319, 448);
+            btnImprimir.Location = new Point(279, 344);
+            btnImprimir.Margin = new Padding(3, 2, 3, 2);
             btnImprimir.Name = "btnImprimir";
-            btnImprimir.Size = new Size(189, 57);
+            btnImprimir.Size = new Size(165, 47);
             btnImprimir.TabIndex = 1;
             btnImprimir.UseVisualStyleBackColor = true;
             btnImprimir.Click += btnImprimir_Click;
@@ -95,18 +97,19 @@
             panel2.BackColor = Color.FromArgb(192, 255, 192);
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(lblClub);
-            panel2.Location = new Point(23, 113);
+            panel2.Location = new Point(16, 77);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(388, 90);
+            panel2.Size = new Size(340, 68);
             panel2.TabIndex = 1;
             // 
             // lblClub
             // 
             lblClub.AutoSize = true;
             lblClub.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            lblClub.Location = new Point(87, 24);
+            lblClub.Location = new Point(76, 10);
             lblClub.Name = "lblClub";
-            lblClub.Size = new Size(183, 35);
+            lblClub.Size = new Size(146, 28);
             lblClub.TabIndex = 0;
             lblClub.Text = "Club Deportivo";
             // 
@@ -117,26 +120,27 @@
             panel3.Controls.Add(lblFechaActual);
             panel3.Controls.Add(lblDatosClub);
             panel3.Controls.Add(lblFecha);
-            panel3.Location = new Point(417, 113);
+            panel3.Location = new Point(361, 77);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(388, 90);
+            panel3.Size = new Size(340, 68);
             panel3.TabIndex = 2;
             // 
             // lblFechaActual
             // 
             lblFechaActual.AutoSize = true;
-            lblFechaActual.Location = new Point(184, 13);
+            lblFechaActual.Location = new Point(161, 10);
             lblFechaActual.Name = "lblFechaActual";
-            lblFechaActual.Size = new Size(93, 20);
+            lblFechaActual.Size = new Size(75, 15);
             lblFechaActual.TabIndex = 2;
             lblFechaActual.Text = "Fecha Actual";
             // 
             // lblDatosClub
             // 
             lblDatosClub.AutoSize = true;
-            lblDatosClub.Location = new Point(102, 50);
+            lblDatosClub.Location = new Point(89, 38);
             lblDatosClub.Name = "lblDatosClub";
-            lblDatosClub.Size = new Size(175, 20);
+            lblDatosClub.Size = new Size(137, 15);
             lblDatosClub.TabIndex = 1;
             lblDatosClub.Text = "Datos generales del Club";
             // 
@@ -144,9 +148,9 @@
             // 
             lblFecha.AutoSize = true;
             lblFecha.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFecha.Location = new Point(102, 13);
+            lblFecha.Location = new Point(89, 10);
             lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(54, 20);
+            lblFecha.Size = new Size(44, 15);
             lblFecha.TabIndex = 0;
             lblFecha.Text = "Fecha: ";
             // 
@@ -165,98 +169,99 @@
             panel4.Controls.Add(lblFormaDePago);
             panel4.Controls.Add(lblPagoDe);
             panel4.Controls.Add(lblCliente);
-            panel4.Location = new Point(23, 209);
+            panel4.Location = new Point(16, 149);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(782, 233);
+            panel4.Size = new Size(684, 175);
             panel4.TabIndex = 3;
             // 
             // lblTemaAPagar
             // 
             lblTemaAPagar.AutoSize = true;
-            lblTemaAPagar.Location = new Point(245, 75);
+            lblTemaAPagar.Location = new Point(214, 56);
             lblTemaAPagar.Name = "lblTemaAPagar";
-            lblTemaAPagar.Size = new Size(107, 20);
+            lblTemaAPagar.Size = new Size(87, 15);
             lblTemaAPagar.TabIndex = 11;
             lblTemaAPagar.Text = "Cuota Mensual";
             // 
             // lblVencimiento
             // 
             lblVencimiento.AutoSize = true;
-            lblVencimiento.Location = new Point(245, 106);
+            lblVencimiento.Location = new Point(214, 80);
             lblVencimiento.Name = "lblVencimiento";
-            lblVencimiento.Size = new Size(129, 20);
+            lblVencimiento.Size = new Size(104, 15);
             lblVencimiento.TabIndex = 10;
             lblVencimiento.Text = "FechaVencimiento";
             // 
             // lblProximoVenc
             // 
             lblProximoVenc.AutoSize = true;
-            lblProximoVenc.Location = new Point(38, 106);
+            lblProximoVenc.Location = new Point(33, 80);
             lblProximoVenc.Name = "lblProximoVenc";
-            lblProximoVenc.Size = new Size(156, 20);
+            lblProximoVenc.Size = new Size(127, 15);
             lblProximoVenc.TabIndex = 9;
             lblProximoVenc.Text = "Próximo vencimiento: ";
             // 
             // lblNumeroDeSocio
             // 
             lblNumeroDeSocio.AutoSize = true;
-            lblNumeroDeSocio.Location = new Point(118, 40);
+            lblNumeroDeSocio.Location = new Point(103, 30);
             lblNumeroDeSocio.Name = "lblNumeroDeSocio";
-            lblNumeroDeSocio.Size = new Size(17, 20);
+            lblNumeroDeSocio.Size = new Size(13, 15);
             lblNumeroDeSocio.TabIndex = 8;
             lblNumeroDeSocio.Text = "0";
             // 
             // lblSocioNumero
             // 
             lblSocioNumero.AutoSize = true;
-            lblSocioNumero.Location = new Point(38, 40);
+            lblSocioNumero.Location = new Point(33, 30);
             lblSocioNumero.Name = "lblSocioNumero";
-            lblSocioNumero.Size = new Size(74, 20);
+            lblSocioNumero.Size = new Size(59, 15);
             lblSocioNumero.TabIndex = 6;
             lblSocioNumero.Text = "Socio N°: ";
             // 
             // lblPrecio
             // 
             lblPrecio.AutoSize = true;
-            lblPrecio.Location = new Point(642, 180);
+            lblPrecio.Location = new Point(562, 135);
             lblPrecio.Name = "lblPrecio";
-            lblPrecio.Size = new Size(50, 20);
+            lblPrecio.Size = new Size(40, 15);
             lblPrecio.TabIndex = 5;
             lblPrecio.Text = "Precio";
             // 
             // lblMonto
             // 
             lblMonto.AutoSize = true;
-            lblMonto.Location = new Point(482, 180);
+            lblMonto.Location = new Point(422, 135);
             lblMonto.Name = "lblMonto";
-            lblMonto.Size = new Size(68, 20);
+            lblMonto.Size = new Size(55, 15);
             lblMonto.TabIndex = 4;
             lblMonto.Text = "Monto $:";
             // 
             // lblEfectivoOTarjeta
             // 
             lblEfectivoOTarjeta.AutoSize = true;
-            lblEfectivoOTarjeta.Location = new Point(251, 180);
+            lblEfectivoOTarjeta.Location = new Point(220, 135);
             lblEfectivoOTarjeta.Name = "lblEfectivoOTarjeta";
-            lblEfectivoOTarjeta.Size = new Size(123, 20);
+            lblEfectivoOTarjeta.Size = new Size(96, 15);
             lblEfectivoOTarjeta.TabIndex = 3;
             lblEfectivoOTarjeta.Text = "Efectivo o Tarjeta";
             // 
             // lblFormaDePago
             // 
             lblFormaDePago.AutoSize = true;
-            lblFormaDePago.Location = new Point(38, 180);
+            lblFormaDePago.Location = new Point(33, 135);
             lblFormaDePago.Name = "lblFormaDePago";
-            lblFormaDePago.Size = new Size(118, 20);
+            lblFormaDePago.Size = new Size(93, 15);
             lblFormaDePago.TabIndex = 2;
             lblFormaDePago.Text = "Forma de pago: ";
             // 
             // lblPagoDe
             // 
             lblPagoDe.AutoSize = true;
-            lblPagoDe.Location = new Point(38, 75);
+            lblPagoDe.Location = new Point(33, 56);
             lblPagoDe.Name = "lblPagoDe";
-            lblPagoDe.Size = new Size(66, 20);
+            lblPagoDe.Size = new Size(53, 15);
             lblPagoDe.TabIndex = 1;
             lblPagoDe.Text = "Pago de:";
             // 
@@ -264,9 +269,9 @@
             // 
             lblCliente.AutoSize = true;
             lblCliente.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCliente.Location = new Point(38, 15);
+            lblCliente.Location = new Point(33, 11);
             lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(177, 20);
+            lblCliente.Size = new Size(139, 15);
             lblCliente.TabIndex = 0;
             lblCliente.Text = "Nombre y Apellido Socio";
             // 
@@ -274,9 +279,10 @@
             // 
             btnPagar.BackgroundImage = (Image)resources.GetObject("btnPagar.BackgroundImage");
             btnPagar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnPagar.Location = new Point(23, 448);
+            btnPagar.Location = new Point(20, 345);
+            btnPagar.Margin = new Padding(3, 2, 3, 2);
             btnPagar.Name = "btnPagar";
-            btnPagar.Size = new Size(195, 57);
+            btnPagar.Size = new Size(171, 47);
             btnPagar.TabIndex = 4;
             btnPagar.UseVisualStyleBackColor = true;
             btnPagar.Click += btnPagar_Click;
@@ -285,20 +291,22 @@
             // 
             btnCancelar.BackgroundImage = (Image)resources.GetObject("btnCancelar.BackgroundImage");
             btnCancelar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCancelar.Location = new Point(633, 448);
+            btnCancelar.Location = new Point(554, 344);
+            btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(172, 57);
+            btnCancelar.Size = new Size(150, 47);
             btnCancelar.TabIndex = 5;
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // frmComprobante
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(829, 528);
+            ClientSize = new Size(725, 396);
             Controls.Add(btnCancelar);
             Controls.Add(btnPagar);
             Controls.Add(panel4);
@@ -306,6 +314,7 @@
             Controls.Add(panel2);
             Controls.Add(btnImprimir);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmComprobante";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Comprobante";

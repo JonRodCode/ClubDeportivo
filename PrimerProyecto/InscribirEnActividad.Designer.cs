@@ -53,26 +53,28 @@
             // 
             lbNDocNoSocio.AutoSize = true;
             lbNDocNoSocio.BackColor = Color.White;
-            lbNDocNoSocio.Location = new Point(65, 161);
+            lbNDocNoSocio.Location = new Point(57, 121);
             lbNDocNoSocio.Name = "lbNDocNoSocio";
-            lbNDocNoSocio.Size = new Size(132, 20);
+            lbNDocNoSocio.Size = new Size(106, 15);
             lbNDocNoSocio.TabIndex = 0;
             lbNDocNoSocio.Text = "N° de Documento:";
             // 
             // txtNoSocio
             // 
-            txtNoSocio.Location = new Point(246, 158);
+            txtNoSocio.Location = new Point(215, 118);
+            txtNoSocio.Margin = new Padding(3, 2, 3, 2);
             txtNoSocio.Name = "txtNoSocio";
-            txtNoSocio.Size = new Size(125, 27);
+            txtNoSocio.Size = new Size(110, 23);
             txtNoSocio.TabIndex = 0;
             // 
             // btnVerificar
             // 
             btnVerificar.BackgroundImage = (Image)resources.GetObject("btnVerificar.BackgroundImage");
             btnVerificar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnVerificar.Location = new Point(242, 234);
+            btnVerificar.Location = new Point(212, 176);
+            btnVerificar.Margin = new Padding(3, 2, 3, 2);
             btnVerificar.Name = "btnVerificar";
-            btnVerificar.Size = new Size(129, 50);
+            btnVerificar.Size = new Size(113, 38);
             btnVerificar.TabIndex = 2;
             btnVerificar.UseVisualStyleBackColor = true;
             btnVerificar.Click += btnVerificar_Click;
@@ -81,25 +83,27 @@
             // 
             lblActividad.AutoSize = true;
             lblActividad.BackColor = Color.White;
-            lblActividad.Location = new Point(65, 204);
+            lblActividad.Location = new Point(57, 153);
             lblActividad.Name = "lblActividad";
-            lblActividad.Size = new Size(155, 20);
+            lblActividad.Size = new Size(123, 15);
             lblActividad.TabIndex = 3;
             lblActividad.Text = "Nombre de Actividad:";
             // 
             // txtActividad
             // 
-            txtActividad.Location = new Point(246, 197);
+            txtActividad.Location = new Point(215, 148);
+            txtActividad.Margin = new Padding(3, 2, 3, 2);
             txtActividad.Name = "txtActividad";
-            txtActividad.Size = new Size(125, 27);
+            txtActividad.Size = new Size(110, 23);
             txtActividad.TabIndex = 1;
             // 
             // rbEfectivo
             // 
             rbEfectivo.AutoSize = true;
-            rbEfectivo.Location = new Point(45, 49);
+            rbEfectivo.Location = new Point(39, 37);
+            rbEfectivo.Margin = new Padding(3, 2, 3, 2);
             rbEfectivo.Name = "rbEfectivo";
-            rbEfectivo.Size = new Size(83, 24);
+            rbEfectivo.Size = new Size(67, 19);
             rbEfectivo.TabIndex = 0;
             rbEfectivo.TabStop = true;
             rbEfectivo.Text = "Efectivo";
@@ -108,9 +112,10 @@
             // rbTarjeta
             // 
             rbTarjeta.AutoSize = true;
-            rbTarjeta.Location = new Point(45, 79);
+            rbTarjeta.Location = new Point(39, 59);
+            rbTarjeta.Margin = new Padding(3, 2, 3, 2);
             rbTarjeta.Name = "rbTarjeta";
-            rbTarjeta.Size = new Size(74, 24);
+            rbTarjeta.Size = new Size(59, 19);
             rbTarjeta.TabIndex = 1;
             rbTarjeta.TabStop = true;
             rbTarjeta.Text = "Tarjeta";
@@ -123,17 +128,18 @@
             pnFormaPago.Controls.Add(rbTarjeta);
             pnFormaPago.Controls.Add(rbEfectivo);
             pnFormaPago.Enabled = false;
-            pnFormaPago.Location = new Point(397, 154);
+            pnFormaPago.Location = new Point(347, 116);
+            pnFormaPago.Margin = new Padding(3, 2, 3, 2);
             pnFormaPago.Name = "pnFormaPago";
-            pnFormaPago.Size = new Size(178, 125);
+            pnFormaPago.Size = new Size(156, 94);
             pnFormaPago.TabIndex = 3;
             // 
             // lblFormaDePago
             // 
             lblFormaDePago.AutoSize = true;
-            lblFormaDePago.Location = new Point(3, 10);
+            lblFormaDePago.Location = new Point(3, 8);
             lblFormaDePago.Name = "lblFormaDePago";
-            lblFormaDePago.Size = new Size(109, 20);
+            lblFormaDePago.Size = new Size(87, 15);
             lblFormaDePago.TabIndex = 2;
             lblFormaDePago.Text = "Forma de Pago";
             // 
@@ -142,9 +148,10 @@
             btnIrAPagar.BackgroundImage = (Image)resources.GetObject("btnIrAPagar.BackgroundImage");
             btnIrAPagar.BackgroundImageLayout = ImageLayout.Stretch;
             btnIrAPagar.Enabled = false;
-            btnIrAPagar.Location = new Point(409, 326);
+            btnIrAPagar.Location = new Point(358, 244);
+            btnIrAPagar.Margin = new Padding(3, 2, 3, 2);
             btnIrAPagar.Name = "btnIrAPagar";
-            btnIrAPagar.Size = new Size(166, 73);
+            btnIrAPagar.Size = new Size(145, 55);
             btnIrAPagar.TabIndex = 4;
             btnIrAPagar.UseVisualStyleBackColor = true;
             btnIrAPagar.Click += btnIrAPagar_Click;
@@ -153,9 +160,10 @@
             // 
             btnVolver.BackgroundImage = Properties.Resources.btn_volver;
             btnVolver.BackgroundImageLayout = ImageLayout.Stretch;
-            btnVolver.Location = new Point(409, 427);
+            btnVolver.Location = new Point(358, 320);
+            btnVolver.Margin = new Padding(3, 2, 3, 2);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(166, 68);
+            btnVolver.Size = new Size(145, 51);
             btnVolver.TabIndex = 5;
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
@@ -164,11 +172,12 @@
             // 
             dgvActividades.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvActividades.Columns.AddRange(new DataGridViewColumn[] { ColumnActividad, ColumnProfesor });
-            dgvActividades.Location = new Point(65, 326);
+            dgvActividades.Location = new Point(57, 244);
+            dgvActividades.Margin = new Padding(3, 2, 3, 2);
             dgvActividades.Name = "dgvActividades";
             dgvActividades.RowHeadersWidth = 51;
             dgvActividades.RowTemplate.Height = 29;
-            dgvActividades.Size = new Size(306, 167);
+            dgvActividades.Size = new Size(268, 125);
             dgvActividades.TabIndex = 6;
             // 
             // ColumnActividad
@@ -191,33 +200,34 @@
             // 
             lblListado.AutoSize = true;
             lblListado.BackColor = Color.White;
-            lblListado.Location = new Point(65, 303);
+            lblListado.Location = new Point(57, 227);
             lblListado.Name = "lblListado";
-            lblListado.Size = new Size(159, 20);
+            lblListado.Size = new Size(125, 15);
             lblListado.TabIndex = 7;
             lblListado.Text = "Listado de Actividades";
             // 
             // btnCambiar
             // 
             btnCambiar.BackColor = Color.White;
+            btnCambiar.BackgroundImage = (Image)resources.GetObject("btnCambiar.BackgroundImage");
             btnCambiar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCambiar.Location = new Point(242, 234);
+            btnCambiar.Location = new Point(212, 176);
+            btnCambiar.Margin = new Padding(3, 2, 3, 2);
             btnCambiar.Name = "btnCambiar";
-            btnCambiar.Size = new Size(129, 50);
+            btnCambiar.Size = new Size(113, 38);
             btnCambiar.TabIndex = 6;
-            btnCambiar.Text = "Cambiar";
             btnCambiar.UseVisualStyleBackColor = false;
             btnCambiar.Visible = false;
             btnCambiar.Click += btnCambiar_Click;
             // 
             // fmrInscribirEnActividad
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(809, 601);
+            ClientSize = new Size(708, 451);
             Controls.Add(btnCambiar);
             Controls.Add(lblListado);
             Controls.Add(dgvActividades);
@@ -229,6 +239,7 @@
             Controls.Add(btnVerificar);
             Controls.Add(txtNoSocio);
             Controls.Add(lbNDocNoSocio);
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "fmrInscribirEnActividad";
