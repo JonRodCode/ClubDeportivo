@@ -20,6 +20,32 @@ namespace PrimerProyecto.Datos
         private static Conexion? con = null;
         private Conexion() // asignamos valores a las variables de la conexion
         {
+            bool correcto = false;
+            int mensaje;
+
+            string T_servidor = "Servidor";
+            string T_puerto = "Puerto";
+            string T_usuario = "Usuario";
+            string T_clave = "Clave";
+
+            while (correcto != true)
+            {
+                T_servidor = Microsoft.VisualBasic.Interaction.InputBox("Ingrese servidor", "DATOS DE INSTALACIÓN MySQL");
+                T_puerto = Microsoft.VisualBasic.Interaction.InputBox("Ingrese puerto", "DATOS DE INSTALACIÓN MySQL");
+                T_usuario = Microsoft.VisualBasic.Interaction.InputBox("Ingrese usuario", "DATOS DE INSTALACIÓN MySQL");
+                T_clave = Microsoft.VisualBasic.Interaction.InputBox("Ingrese clave", "DATOS DE INSTALACIÓN MySQL");
+
+                mensaje = (int)MessageBox.Show("Su ingreso: Servidor: " + T_servidor + " Puerto: " + T_puerto + " Usuario: " + T_usuario + " Clave: " + T_clave, "AVISO DEL SISTEMA",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (mensaje != 6)
+                {
+                    MessageBox.Show("Ingrese nuevamente los datos.");
+                    correcto = false;
+                }
+                else
+                    correcto = true;
+            }
+
             this.baseDatos = "clubdeportivo";
             this.servidor = "localhost";
             this.puerto = "3306";
